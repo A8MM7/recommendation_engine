@@ -1,0 +1,2013 @@
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking size of void *... 8
+checking size of int... 4
+checking size of long... 8
+checking size of intmax_t... 8
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking whether __asm__ syntax is compilable... yes
+checking whether __attribute__ syntax is compilable... yes
+checking whether compiler supports -fvisibility=hidden... yes
+checking whether compiler supports -Werror... yes
+checking whether tls_model attribute is compilable... no
+checking for a BSD-compatible install... /usr/bin/install -c
+checking for ranlib... ranlib
+checking for ar... /usr/bin/ar
+checking for ld... /usr/bin/ld
+checking for autoconf... no
+checking for memalign... yes
+checking for valloc... yes
+checking configured backtracing method... N/A
+checking for sbrk... yes
+checking whether utrace(2) is compilable... no
+checking whether valgrind is compilable... no
+checking STATIC_PAGE_SHIFT... 12
+checking pthread.h usability... yes
+checking pthread.h presence... yes
+checking for pthread.h... yes
+checking for pthread_create in -lpthread... yes
+checking for _malloc_thread_cleanup... no
+checking for _pthread_mutex_init_calloc_cb... no
+checking for TLS... yes
+checking whether a program using ffsl is compilable... yes
+checking whether atomic(9) is compilable... no
+checking whether Darwin OSAtomic*() is compilable... no
+checking whether to force 32-bit __sync_{add,sub}_and_fetch()... no
+checking whether to force 64-bit __sync_{add,sub}_and_fetch()... no
+checking whether Darwin OSSpin*() is compilable... no
+checking for stdbool.h that conforms to C99... yes
+checking for _Bool... yes
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating doc/html.xsl
+config.status: creating doc/manpages.xsl
+config.status: creating doc/jemalloc.xml
+config.status: creating include/jemalloc/jemalloc.h
+config.status: creating include/jemalloc/internal/jemalloc_internal.h
+config.status: creating test/jemalloc_test.h
+config.status: creating config.stamp
+config.status: creating bin/jemalloc.sh
+config.status: creating include/jemalloc/jemalloc_defs.h
+config.status: executing include/jemalloc/internal/size_classes.h commands
+===============================================================================
+jemalloc version   : 3.2.0-0-g87499f6748ebe4817571e817e9f680ccb5bf54a9
+library revision   : 1
+
+CC                 : gcc
+CPPFLAGS           :  -D_GNU_SOURCE -D_REENTRANT
+CFLAGS             : -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -fvisibility=hidden
+LDFLAGS            :
+LIBS               :  -lm -lpthread
+RPATH_EXTRA        :
+
+XSLTPROC           : /usr/bin/xsltproc
+XSLROOT            :
+
+PREFIX             : /usr/local
+BINDIR             : /usr/local/bin
+INCLUDEDIR         : /usr/local/include
+LIBDIR             : /usr/local/lib
+DATADIR            : /usr/local/share
+MANDIR             : /usr/local/share/man
+
+srcroot            :
+abs_srcroot        : /home/hadoop/redis-2.8.7/redis-2.8.7/deps/jemalloc/
+objroot            :
+abs_objroot        : /home/hadoop/redis-2.8.7/redis-2.8.7/deps/jemalloc/
+
+JEMALLOC_PREFIX    : je_
+JEMALLOC_PRIVATE_NAMESPACE
+                   :
+install_suffix     :
+autogen            : 0
+experimental       : 1
+cc-silence         : 1
+debug              : 0
+stats              : 1
+prof               : 0
+prof-libunwind     : 0
+prof-libgcc        : 0
+prof-gcc           : 0
+tcache             : 1
+fill               : 1
+utrace             : 0
+valgrind           : 0
+xmalloc            : 0
+mremap             : 0
+munmap             : 0
+dss                : 0
+lazy_lock          : 0
+tls                : 1
+===============================================================================
+cd jemalloc && make CFLAGS="-std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops " LDFLAGS="" lib/libjemalloc.a
+make[3]: Entering directory `/home/hadoop/redis-2.8.7/redis-2.8.7/deps/jemalloc'
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/jemalloc.o src/jemalloc.c
+src/jemalloc.c: In function ‘je_realloc’:
+src/jemalloc.c:1082:9: warning: variable ‘old_rzsize’ set but not used [-Wunused-but-set-variable]
+  size_t old_rzsize JEMALLOC_CC_SILENCE_INIT(0);
+         ^~~~~~~~~~
+src/jemalloc.c: In function ‘je_free’:
+src/jemalloc.c:1230:10: warning: variable ‘rzsize’ set but not used [-Wunused-but-set-variable]
+   size_t rzsize JEMALLOC_CC_SILENCE_INIT(0);
+          ^~~~~~
+src/jemalloc.c: In function ‘je_rallocm’:
+src/jemalloc.c:1477:9: warning: variable ‘old_rzsize’ set but not used [-Wunused-but-set-variable]
+  size_t old_rzsize JEMALLOC_CC_SILENCE_INIT(0);
+         ^~~~~~~~~~
+src/jemalloc.c: In function ‘je_dallocm’:
+src/jemalloc.c:1622:9: warning: variable ‘rzsize’ set but not used [-Wunused-but-set-variable]
+  size_t rzsize JEMALLOC_CC_SILENCE_INIT(0);
+         ^~~~~~
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/arena.o src/arena.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/atomic.o src/atomic.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/base.o src/base.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/bitmap.o src/bitmap.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/chunk.o src/chunk.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/chunk_dss.o src/chunk_dss.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/chunk_mmap.o src/chunk_mmap.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/ckh.o src/ckh.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/ctl.o src/ctl.c
+src/ctl.c: In function ‘epoch_ctl’:
+src/ctl.c:1112:11: warning: variable ‘newval’ set but not used [-Wunused-but-set-variable]
+  uint64_t newval;
+           ^~~~~~
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/extent.o src/extent.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/hash.o src/hash.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/huge.o src/huge.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/mb.o src/mb.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/mutex.o src/mutex.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/prof.o src/prof.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/quarantine.o src/quarantine.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/rtree.o src/rtree.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/stats.o src/stats.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/tcache.o src/tcache.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/util.o src/util.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/tsd.o src/tsd.c
+ar crus lib/libjemalloc.a src/jemalloc.o src/arena.o src/atomic.o src/base.o src/bitmap.o src/chunk.o src/chunk_dss.o src/chunk_mmap.o src/ckh.o src/ctl.o src/exten    t.o src/hash.o src/huge.o src/mb.o src/mutex.o src/prof.o src/quarantine.o src/rtree.o src/stats.o src/tcache.o src/util.o src/tsd.o
+make[3]: Leaving directory `/home/hadoop/redis-2.8.7/redis-2.8.7/deps/jemalloc'
+make[2]: Leaving directory `/home/hadoop/redis-2.8.7/redis-2.8.7/deps'
+    CC adlist.o
+    CC ae.o
+    CC anet.o
+    CC dict.o
+    CC redis.o
+    CC sds.o
+    CC zmalloc.o
+    CC lzf_c.o
+In file included from lzf_c.c:37:0:
+lzfP.h:131:6: warning: this use of "defined" may not be portable [-Wexpansion-to-defined]
+ #if !STRICT_ALIGN
+      ^~~~~~~~~~~~
+lzfP.h:131:6: warning: this use of "defined" may not be portable [-Wexpansion-to-defined]
+lzf_c.c: In function ‘lzf_compress’:
+lzf_c.c:158:5: warning: this use of "defined" may not be portable [-Wexpansion-to-defined]
+ #if STRICT_ALIGN
+     ^~~~~~~~~~~~
+lzf_c.c:158:5: warning: this use of "defined" may not be portable [-Wexpansion-to-defined]
+    CC lzf_d.o
+In file included from lzf_d.c:37:0:
+lzfP.h:131:6: warning: this use of "defined" may not be portable [-Wexpansion-to-defined]
+ #if !STRICT_ALIGN
+      ^~~~~~~~~~~~
+lzfP.h:131:6: warning: this use of "defined" may not be portable [-Wexpansion-to-defined]
+    CC pqsort.o
+    CC zipmap.o
+    CC sha1.o
+    CC ziplist.o
+    CC release.o
+    CC networking.o
+    CC util.o
+    CC object.o
+    CC db.o
+    CC replication.o
+    CC rdb.o
+    CC t_string.o
+    CC t_list.o
+    CC t_set.o
+    CC t_zset.o
+    CC t_hash.o
+    CC config.o
+    CC aof.o
+    CC pubsub.o
+    CC multi.o
+    CC debug.o
+    CC sort.o
+    CC intset.o
+    CC syncio.o
+    CC migrate.o
+    CC endianconv.o
+    CC slowlog.o
+    CC scripting.o
+    CC bio.o
+    CC rio.o
+    CC rand.o
+    CC memtest.o
+    CC crc64.o
+    CC bitops.o
+    CC sentinel.o
+    CC notify.o
+    CC setproctitle.o
+setproctitle.c:46:6: warning: this use of "defined" may not be portable [-Wexpansion-to-defined]
+ #if !HAVE_SETPROCTITLE
+      ^~~~~~~~~~~~~~~~~
+setproctitle.c:46:6: warning: this use of "defined" may not be portable [-Wexpansion-to-defined]
+setproctitle.c:46:6: warning: this use of "defined" may not be portable [-Wexpansion-to-defined]
+    LINK redis-server
+    INSTALL redis-sentinel
+    CC redis-cli.o
+    LINK redis-cli
+    CC redis-benchmark.o
+    LINK redis-benchmark
+    CC redis-check-dump.o
+    LINK redis-check-dump
+    CC redis-check-aof.o
+    LINK redis-check-aof
+
+Hint: To run 'make test' is a good idea ;)
+
+make[1]: Leaving directory `/home/hadoop/redis-2.8.7/redis-2.8.7/src'
+[hadoop@ip-172-31-0-231 redis-2.8.7]$ dir
+00-RELEASENOTES  BUGS  CONTRIBUTING  COPYING  deps  INSTALL  Makefile  MANIFESTO  README  redis.conf  runtest  runtest-sentinel  sentinel.conf  src  tests  utils
+[hadoop@ip-172-31-0-231 redis-2.8.7]$ cd ..
+[hadoop@ip-172-31-0-231 redis-2.8.7]$ dir
+00-RELEASENOTES  CONTRIBUTING  deps      INSTALL   MANIFESTO  redis-2.8.7         redis.conf  runtest-sentinel  src    utils
+BUGS             COPYING       hello.py  Makefile  README     redis-2.8.7.tar.gz  runtest     sentinel.conf     tests
+[hadoop@ip-172-31-0-231 redis-2.8.7]$ twisted -noy hello.py &
+[1] 7258
+-bash: twisted: command not found
+[hadoop@ip-172-31-0-231 redis-2.8.7]$ twistd -noy hello.py &
+[2] 8214
+[1]   Exit 127                twisted -noy hello.py
+[hadoop@ip-172-31-0-231 redis-2.8.7]$ Unhandled Error
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/Twisted-19.10.0-py2.7-linux-x86_64.egg/twisted/application/app.py", line 674, in run
+    runApp(config)
+  File "/usr/local/lib/python2.7/site-packages/Twisted-19.10.0-py2.7-linux-x86_64.egg/twisted/scripts/twistd.py", line 25, in runApp
+    runner.run()
+  File "/usr/local/lib/python2.7/site-packages/Twisted-19.10.0-py2.7-linux-x86_64.egg/twisted/application/app.py", line 381, in run
+    self.application = self.createOrGetApplication()
+  File "/usr/local/lib/python2.7/site-packages/Twisted-19.10.0-py2.7-linux-x86_64.egg/twisted/application/app.py", line 453, in createOrGetApplication
+    application = getApplication(self.config, passphrase)
+--- <exception caught here> ---
+  File "/usr/local/lib/python2.7/site-packages/Twisted-19.10.0-py2.7-linux-x86_64.egg/twisted/application/app.py", line 464, in getApplication
+    application = service.loadApplication(filename, style, passphrase)
+  File "/usr/local/lib/python2.7/site-packages/Twisted-19.10.0-py2.7-linux-x86_64.egg/twisted/application/service.py", line 416, in loadApplication
+    application = sob.loadValueFromFile(filename, 'application')
+  File "/usr/local/lib/python2.7/site-packages/Twisted-19.10.0-py2.7-linux-x86_64.egg/twisted/persisted/sob.py", line 177, in loadValueFromFile
+    eval(codeObj, d, d)
+  File "hello.py", line 21, in <module>
+    r.set(k,v)
+  File "build/bdist.linux-x86_64/egg/redis/client.py", line 1766, in set
+    return self.execute_command('SET', *pieces)
+  File "build/bdist.linux-x86_64/egg/redis/client.py", line 875, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "build/bdist.linux-x86_64/egg/redis/connection.py", line 1185, in get_connection
+    connection.connect()
+  File "build/bdist.linux-x86_64/egg/redis/connection.py", line 557, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+
+
+Failed to load application: Error 111 connecting to localhost:6379. Connection refused.
+
+cat: Unable to write to output stream.
+cat: Unable to write to output stream.
+cat: Unable to write to output stream.
+cat: Unable to write to output stream.
+cat: Unable to write to output stream.
+^C
+[2]+  Exit 1                  twistd -noy hello.py
+[hadoop@ip-172-31-0-231 redis-2.8.7]$ sudo apt-get install redis-server
+sudo: apt-get: command not found
+[hadoop@ip-172-31-0-231 redis-2.8.7]$ sudo yum install redissudo yum install re
+Loaded plugins: priorities, update-motd, upgrade-helper
+amzn-main                                                                                                                                    | 2.1 kB  00:00:00
+amzn-updates                                                                                                                                 | 2.5 kB  00:00:00
+13 packages excluded due to repository priority protections
+No package redissudo available.
+Package yum-3.4.3-150.70.amzn1.noarch already installed and latest version
+No package install available.
+No package re available.
+Nothing to do
+[hadoop@ip-172-31-0-231 redis-2.8.7]$ sudo yum install redis
+Loaded plugins: priorities, update-motd, upgrade-helper
+13 packages excluded due to repository priority protections
+No package redis available.
+Error: Nothing to do
+[hadoop@ip-172-31-0-231 redis-2.8.7]$ sudo service redis-server start
+redis-server: unrecognized service
+[hadoop@ip-172-31-0-231 redis-2.8.7]$ redis-server
+-bash: redis-server: command not found
+[hadoop@ip-172-31-0-231 redis-2.8.7]$ cd redis
+-bash: cd: redis: No such file or directory
+[hadoop@ip-172-31-0-231 redis-2.8.7]$ dir
+00-RELEASENOTES  CONTRIBUTING  deps      INSTALL   MANIFESTO  redis-2.8.7         redis.conf  runtest-sentinel  src    utils
+BUGS             COPYING       hello.py  Makefile  README     redis-2.8.7.tar.gz  runtest     sentinel.conf     tests
+[hadoop@ip-172-31-0-231 redis-2.8.7]$ redis-server
+-bash: redis-server: command not found
+[hadoop@ip-172-31-0-231 redis-2.8.7]$ redis-cli ping
+-bash: redis-cli: command not found
+[hadoop@ip-172-31-0-231 redis-2.8.7]$ cd ..
+[hadoop@ip-172-31-0-231 ~]$ dir
+ml-1m  ml-1m.zip  ratings.csv  redis-2.8.7  redis-2.8.7.tar.gz
+[hadoop@ip-172-31-0-231 ~]$ wget http://download.redis.io/redis-stable.tar.gz
+--2020-03-02 14:39:33--  http://download.redis.io/redis-stable.tar.gz
+Resolving download.redis.io (download.redis.io)... 109.74.203.151
+Connecting to download.redis.io (download.redis.io)|109.74.203.151|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2023006 (1.9M) [application/x-gzip]
+Saving to: ‘redis-stable.tar.gz’
+
+redis-stable.tar.gz                      100%[==================================================================================>]   1.93M  3.60MB/s    in 0.5s
+
+2020-03-02 14:39:34 (3.60 MB/s) - ‘redis-stable.tar.gz’ saved [2023006/2023006]
+
+[hadoop@ip-172-31-0-231 ~]$ tar xvzf redis-stable.tar.gz
+redis-stable/
+redis-stable/INSTALL
+redis-stable/sentinel.conf
+redis-stable/deps/
+redis-stable/deps/update-jemalloc.sh
+redis-stable/deps/jemalloc/
+redis-stable/deps/jemalloc/.autom4te.cfg
+redis-stable/deps/jemalloc/configure.ac
+redis-stable/deps/jemalloc/doc/
+redis-stable/deps/jemalloc/doc/html.xsl.in
+redis-stable/deps/jemalloc/doc/jemalloc.xml.in
+redis-stable/deps/jemalloc/doc/manpages.xsl.in
+redis-stable/deps/jemalloc/doc/stylesheet.xsl
+redis-stable/deps/jemalloc/include/
+redis-stable/deps/jemalloc/include/jemalloc/
+redis-stable/deps/jemalloc/include/jemalloc/jemalloc_macros.h.in
+redis-stable/deps/jemalloc/include/jemalloc/jemalloc_rename.sh
+redis-stable/deps/jemalloc/include/jemalloc/jemalloc_defs.h.in
+redis-stable/deps/jemalloc/include/jemalloc/jemalloc_mangle.sh
+redis-stable/deps/jemalloc/include/jemalloc/jemalloc_protos.h.in
+redis-stable/deps/jemalloc/include/jemalloc/jemalloc_typedefs.h.in
+redis-stable/deps/jemalloc/include/jemalloc/internal/
+redis-stable/deps/jemalloc/include/jemalloc/internal/tsd_malloc_thread_cleanup.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/bitmap.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/mutex_prof.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/ph.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/witness.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/assert.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/jemalloc_internal_inlines_a.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/prof_inlines_b.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/prof_types.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/qr.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/size_classes.sh
+redis-stable/deps/jemalloc/include/jemalloc/internal/public_namespace.sh
+redis-stable/deps/jemalloc/include/jemalloc/internal/extent_externs.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/smoothstep.sh
+redis-stable/deps/jemalloc/include/jemalloc/internal/tcache_structs.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/jemalloc_internal_types.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/private_symbols.sh
+redis-stable/deps/jemalloc/include/jemalloc/internal/base_inlines.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/tsd_generic.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/background_thread_structs.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/util.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/arena_types.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/tcache_types.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/prof_inlines_a.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/jemalloc_internal_macros.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/prof_structs.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/base_types.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/bit_util.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/jemalloc_internal_decls.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/bin_stats.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/jemalloc_internal_defs.h.in
+redis-stable/deps/jemalloc/include/jemalloc/internal/arena_stats.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/stats.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/atomic.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/ctl.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/arena_inlines_a.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/arena_inlines_b.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/arena_externs.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/base_externs.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/hooks.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/background_thread_externs.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/emitter.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/jemalloc_internal_externs.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/tcache_externs.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/tsd.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/rtree.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/prof_externs.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/extent_dss.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/ql.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/jemalloc_preamble.h.in
+redis-stable/deps/jemalloc/include/jemalloc/internal/sz.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/pages.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/jemalloc_internal_includes.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/mutex_pool.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/atomic_msvc.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/arena_structs_a.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/base_structs.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/extent_inlines.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/private_namespace.sh
+redis-stable/deps/jemalloc/include/jemalloc/internal/mutex.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/atomic_gcc_sync.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/public_unnamespace.sh
+redis-stable/deps/jemalloc/include/jemalloc/internal/ticker.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/tsd_types.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/jemalloc_internal_inlines_b.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/ckh.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/div.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/nstime.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/smoothstep.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/jemalloc_internal_inlines_c.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/bin.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/prng.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/arena_structs_b.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/rb.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/large_externs.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/background_thread_inlines.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/atomic_c11.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/tsd_tls.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/extent_mmap.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/extent_types.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/tsd_win.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/atomic_gcc_atomic.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/tcache_inlines.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/log.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/spin.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/hash.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/extent_structs.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/rtree_tsd.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/malloc_io.h
+redis-stable/deps/jemalloc/include/jemalloc/internal/cache_bin.h
+redis-stable/deps/jemalloc/include/jemalloc/jemalloc.sh
+redis-stable/deps/jemalloc/include/msvc_compat/
+redis-stable/deps/jemalloc/include/msvc_compat/windows_extra.h
+redis-stable/deps/jemalloc/include/msvc_compat/strings.h
+redis-stable/deps/jemalloc/include/msvc_compat/C99/
+redis-stable/deps/jemalloc/include/msvc_compat/C99/stdbool.h
+redis-stable/deps/jemalloc/include/msvc_compat/C99/stdint.h
+redis-stable/deps/jemalloc/.gitattributes
+redis-stable/deps/jemalloc/autogen.sh
+redis-stable/deps/jemalloc/scripts/
+redis-stable/deps/jemalloc/scripts/gen_travis.py
+redis-stable/deps/jemalloc/scripts/gen_run_tests.py
+redis-stable/deps/jemalloc/src/
+redis-stable/deps/jemalloc/src/extent_mmap.c
+redis-stable/deps/jemalloc/src/ticker.c
+redis-stable/deps/jemalloc/src/nstime.c
+redis-stable/deps/jemalloc/src/base.c
+redis-stable/deps/jemalloc/src/prof.c
+redis-stable/deps/jemalloc/src/background_thread.c
+redis-stable/deps/jemalloc/src/ckh.c
+redis-stable/deps/jemalloc/src/rtree.c
+redis-stable/deps/jemalloc/src/large.c
+redis-stable/deps/jemalloc/src/div.c
+redis-stable/deps/jemalloc/src/hooks.c
+redis-stable/deps/jemalloc/src/mutex.c
+redis-stable/deps/jemalloc/src/jemalloc_cpp.cpp
+redis-stable/deps/jemalloc/src/jemalloc.c
+redis-stable/deps/jemalloc/src/bitmap.c
+redis-stable/deps/jemalloc/src/extent_dss.c
+redis-stable/deps/jemalloc/src/tsd.c
+redis-stable/deps/jemalloc/src/stats.c
+redis-stable/deps/jemalloc/src/bin.c
+redis-stable/deps/jemalloc/src/log.c
+redis-stable/deps/jemalloc/src/mutex_pool.c
+redis-stable/deps/jemalloc/src/prng.c
+redis-stable/deps/jemalloc/src/pages.c
+redis-stable/deps/jemalloc/src/tcache.c
+redis-stable/deps/jemalloc/src/sz.c
+redis-stable/deps/jemalloc/src/malloc_io.c
+redis-stable/deps/jemalloc/src/witness.c
+redis-stable/deps/jemalloc/src/hash.c
+redis-stable/deps/jemalloc/src/ctl.c
+redis-stable/deps/jemalloc/src/extent.c
+redis-stable/deps/jemalloc/src/arena.c
+redis-stable/deps/jemalloc/src/zone.c
+redis-stable/deps/jemalloc/VERSION
+redis-stable/deps/jemalloc/test/
+redis-stable/deps/jemalloc/test/unit/
+redis-stable/deps/jemalloc/test/unit/prof_tctx.c
+redis-stable/deps/jemalloc/test/unit/ticker.c
+redis-stable/deps/jemalloc/test/unit/prof_reset.sh
+redis-stable/deps/jemalloc/test/unit/prof_idump.sh
+redis-stable/deps/jemalloc/test/unit/prof_accum.c
+redis-stable/deps/jemalloc/test/unit/junk_free.c
+redis-stable/deps/jemalloc/test/unit/prof_gdump.sh
+redis-stable/deps/jemalloc/test/unit/nstime.c
+redis-stable/deps/jemalloc/test/unit/base.c
+redis-stable/deps/jemalloc/test/unit/SFMT.c
+redis-stable/deps/jemalloc/test/unit/background_thread.c
+redis-stable/deps/jemalloc/test/unit/decay.sh
+redis-stable/deps/jemalloc/test/unit/rb.c
+redis-stable/deps/jemalloc/test/unit/ckh.c
+redis-stable/deps/jemalloc/test/unit/arena_reset.c
+redis-stable/deps/jemalloc/test/unit/pack.c
+redis-stable/deps/jemalloc/test/unit/size_classes.c
+redis-stable/deps/jemalloc/test/unit/rtree.c
+redis-stable/deps/jemalloc/test/unit/prof_thread_name.sh
+redis-stable/deps/jemalloc/test/unit/a0.c
+redis-stable/deps/jemalloc/test/unit/qr.c
+redis-stable/deps/jemalloc/test/unit/junk_alloc.sh
+redis-stable/deps/jemalloc/test/unit/div.c
+redis-stable/deps/jemalloc/test/unit/bit_util.c
+redis-stable/deps/jemalloc/test/unit/arena_reset_prof.sh
+redis-stable/deps/jemalloc/test/unit/spin.c
+redis-stable/deps/jemalloc/test/unit/ph.c
+redis-stable/deps/jemalloc/test/unit/stats_print.c
+redis-stable/deps/jemalloc/test/unit/emitter.c
+redis-stable/deps/jemalloc/test/unit/hooks.c
+redis-stable/deps/jemalloc/test/unit/prof_active.sh
+redis-stable/deps/jemalloc/test/unit/junk_alloc.c
+redis-stable/deps/jemalloc/test/unit/prof_thread_name.c
+redis-stable/deps/jemalloc/test/unit/extent_quantize.c
+redis-stable/deps/jemalloc/test/unit/bitmap.c
+redis-stable/deps/jemalloc/test/unit/zero.sh
+redis-stable/deps/jemalloc/test/unit/tsd.c
+redis-stable/deps/jemalloc/test/unit/prof_tctx.sh
+redis-stable/deps/jemalloc/test/unit/atomic.c
+redis-stable/deps/jemalloc/test/unit/stats.c
+redis-stable/deps/jemalloc/test/unit/mallctl.c
+redis-stable/deps/jemalloc/test/unit/retained.c
+redis-stable/deps/jemalloc/test/unit/prof_reset.c
+redis-stable/deps/jemalloc/test/unit/log.c
+redis-stable/deps/jemalloc/test/unit/prof_idump.c
+redis-stable/deps/jemalloc/test/unit/mtx.c
+redis-stable/deps/jemalloc/test/unit/junk.sh
+redis-stable/deps/jemalloc/test/unit/slab.c
+redis-stable/deps/jemalloc/test/unit/zero.c
+redis-stable/deps/jemalloc/test/unit/prng.c
+redis-stable/deps/jemalloc/test/unit/pages.c
+redis-stable/deps/jemalloc/test/unit/ql.c
+redis-stable/deps/jemalloc/test/unit/smoothstep.c
+redis-stable/deps/jemalloc/test/unit/prof_active.c
+redis-stable/deps/jemalloc/test/unit/pack.sh
+redis-stable/deps/jemalloc/test/unit/prof_accum.sh
+redis-stable/deps/jemalloc/test/unit/fork.c
+redis-stable/deps/jemalloc/test/unit/malloc_io.c
+redis-stable/deps/jemalloc/test/unit/witness.c
+redis-stable/deps/jemalloc/test/unit/background_thread_enable.c
+redis-stable/deps/jemalloc/test/unit/junk_free.sh
+redis-stable/deps/jemalloc/test/unit/decay.c
+redis-stable/deps/jemalloc/test/unit/hash.c
+redis-stable/deps/jemalloc/test/unit/math.c
+redis-stable/deps/jemalloc/test/unit/arena_reset_prof.c
+redis-stable/deps/jemalloc/test/unit/mq.c
+redis-stable/deps/jemalloc/test/unit/prof_gdump.c
+redis-stable/deps/jemalloc/test/unit/junk.c
+redis-stable/deps/jemalloc/test/integration/
+redis-stable/deps/jemalloc/test/integration/overflow.c
+redis-stable/deps/jemalloc/test/integration/xallocx.c
+redis-stable/deps/jemalloc/test/integration/thread_tcache_enabled.c
+redis-stable/deps/jemalloc/test/integration/posix_memalign.c
+redis-stable/deps/jemalloc/test/integration/rallocx.c
+redis-stable/deps/jemalloc/test/integration/mallocx.sh
+redis-stable/deps/jemalloc/test/integration/thread_arena.c
+redis-stable/deps/jemalloc/test/integration/cpp/
+redis-stable/deps/jemalloc/test/integration/cpp/basic.cpp
+redis-stable/deps/jemalloc/test/integration/xallocx.sh
+redis-stable/deps/jemalloc/test/integration/allocated.c
+redis-stable/deps/jemalloc/test/integration/MALLOCX_ARENA.c
+redis-stable/deps/jemalloc/test/integration/sdallocx.c
+redis-stable/deps/jemalloc/test/integration/mallocx.c
+redis-stable/deps/jemalloc/test/integration/aligned_alloc.c
+redis-stable/deps/jemalloc/test/integration/extent.c
+redis-stable/deps/jemalloc/test/integration/extent.sh
+redis-stable/deps/jemalloc/test/include/
+redis-stable/deps/jemalloc/test/include/test/
+redis-stable/deps/jemalloc/test/include/test/SFMT-params11213.h
+redis-stable/deps/jemalloc/test/include/test/SFMT-params1279.h
+redis-stable/deps/jemalloc/test/include/test/mtx.h
+redis-stable/deps/jemalloc/test/include/test/SFMT-params132049.h
+redis-stable/deps/jemalloc/test/include/test/SFMT-params2281.h
+redis-stable/deps/jemalloc/test/include/test/test.h
+redis-stable/deps/jemalloc/test/include/test/btalloc.h
+redis-stable/deps/jemalloc/test/include/test/mq.h
+redis-stable/deps/jemalloc/test/include/test/SFMT-params19937.h
+redis-stable/deps/jemalloc/test/include/test/jemalloc_test.h.in
+redis-stable/deps/jemalloc/test/include/test/SFMT-params44497.h
+redis-stable/deps/jemalloc/test/include/test/thd.h
+redis-stable/deps/jemalloc/test/include/test/timer.h
+redis-stable/deps/jemalloc/test/include/test/SFMT-alti.h
+redis-stable/deps/jemalloc/test/include/test/SFMT-params4253.h
+redis-stable/deps/jemalloc/test/include/test/SFMT-params.h
+redis-stable/deps/jemalloc/test/include/test/SFMT-params216091.h
+redis-stable/deps/jemalloc/test/include/test/math.h
+redis-stable/deps/jemalloc/test/include/test/extent_hooks.h
+redis-stable/deps/jemalloc/test/include/test/SFMT-sse2.h
+redis-stable/deps/jemalloc/test/include/test/SFMT-params607.h
+redis-stable/deps/jemalloc/test/include/test/SFMT.h
+redis-stable/deps/jemalloc/test/include/test/jemalloc_test_defs.h.in
+redis-stable/deps/jemalloc/test/include/test/SFMT-params86243.h
+redis-stable/deps/jemalloc/test/stress/
+redis-stable/deps/jemalloc/test/stress/microbench.c
+redis-stable/deps/jemalloc/test/src/
+redis-stable/deps/jemalloc/test/src/SFMT.c
+redis-stable/deps/jemalloc/test/src/btalloc.c
+redis-stable/deps/jemalloc/test/src/test.c
+redis-stable/deps/jemalloc/test/src/thd.c
+redis-stable/deps/jemalloc/test/src/btalloc_1.c
+redis-stable/deps/jemalloc/test/src/mtx.c
+redis-stable/deps/jemalloc/test/src/btalloc_0.c
+redis-stable/deps/jemalloc/test/src/math.c
+redis-stable/deps/jemalloc/test/src/mq.c
+redis-stable/deps/jemalloc/test/src/timer.c
+redis-stable/deps/jemalloc/test/test.sh.in
+redis-stable/deps/jemalloc/TUNING.md
+redis-stable/deps/jemalloc/msvc/
+redis-stable/deps/jemalloc/msvc/projects/
+redis-stable/deps/jemalloc/msvc/projects/vc2017/
+redis-stable/deps/jemalloc/msvc/projects/vc2017/jemalloc/
+redis-stable/deps/jemalloc/msvc/projects/vc2017/jemalloc/jemalloc.vcxproj.filters
+redis-stable/deps/jemalloc/msvc/projects/vc2017/jemalloc/jemalloc.vcxproj
+redis-stable/deps/jemalloc/msvc/projects/vc2017/test_threads/
+redis-stable/deps/jemalloc/msvc/projects/vc2017/test_threads/test_threads.vcxproj
+redis-stable/deps/jemalloc/msvc/projects/vc2017/test_threads/test_threads.vcxproj.filters
+redis-stable/deps/jemalloc/msvc/projects/vc2015/
+redis-stable/deps/jemalloc/msvc/projects/vc2015/jemalloc/
+redis-stable/deps/jemalloc/msvc/projects/vc2015/jemalloc/jemalloc.vcxproj.filters
+redis-stable/deps/jemalloc/msvc/projects/vc2015/jemalloc/jemalloc.vcxproj
+redis-stable/deps/jemalloc/msvc/projects/vc2015/test_threads/
+redis-stable/deps/jemalloc/msvc/projects/vc2015/test_threads/test_threads.vcxproj
+redis-stable/deps/jemalloc/msvc/projects/vc2015/test_threads/test_threads.vcxproj.filters
+redis-stable/deps/jemalloc/msvc/test_threads/
+redis-stable/deps/jemalloc/msvc/test_threads/test_threads_main.cpp
+redis-stable/deps/jemalloc/msvc/test_threads/test_threads.h
+redis-stable/deps/jemalloc/msvc/test_threads/test_threads.cpp
+redis-stable/deps/jemalloc/msvc/ReadMe.txt
+redis-stable/deps/jemalloc/msvc/jemalloc_vc2017.sln
+redis-stable/deps/jemalloc/msvc/jemalloc_vc2015.sln
+redis-stable/deps/jemalloc/run_tests.sh
+redis-stable/deps/jemalloc/Makefile.in
+redis-stable/deps/jemalloc/config.stamp.in
+redis-stable/deps/jemalloc/m4/
+redis-stable/deps/jemalloc/m4/ax_cxx_compile_stdcxx.m4
+redis-stable/deps/jemalloc/build-aux/
+redis-stable/deps/jemalloc/build-aux/install-sh
+redis-stable/deps/jemalloc/build-aux/config.guess
+redis-stable/deps/jemalloc/build-aux/config.sub
+redis-stable/deps/jemalloc/jemalloc.pc.in
+redis-stable/deps/jemalloc/INSTALL.md
+redis-stable/deps/jemalloc/README
+redis-stable/deps/jemalloc/.appveyor.yml
+redis-stable/deps/jemalloc/configure
+redis-stable/deps/jemalloc/COPYING
+redis-stable/deps/jemalloc/.travis.yml
+redis-stable/deps/jemalloc/.gitignore
+redis-stable/deps/jemalloc/ChangeLog
+redis-stable/deps/jemalloc/bin/
+redis-stable/deps/jemalloc/bin/jeprof.in
+redis-stable/deps/jemalloc/bin/jemalloc-config.in
+redis-stable/deps/jemalloc/bin/jemalloc.sh.in
+redis-stable/deps/linenoise/
+redis-stable/deps/linenoise/example.c
+redis-stable/deps/linenoise/linenoise.c
+redis-stable/deps/linenoise/README.markdown
+redis-stable/deps/linenoise/linenoise.h
+redis-stable/deps/linenoise/.gitignore
+redis-stable/deps/linenoise/Makefile
+redis-stable/deps/hiredis/
+redis-stable/deps/hiredis/dict.h
+redis-stable/deps/hiredis/win32.h
+redis-stable/deps/hiredis/hiredis.c
+redis-stable/deps/hiredis/sdsalloc.h
+redis-stable/deps/hiredis/CHANGELOG.md
+redis-stable/deps/hiredis/read.h
+redis-stable/deps/hiredis/appveyor.yml
+redis-stable/deps/hiredis/read.c
+redis-stable/deps/hiredis/fmacros.h
+redis-stable/deps/hiredis/test.c
+redis-stable/deps/hiredis/net.h
+redis-stable/deps/hiredis/sds.c
+redis-stable/deps/hiredis/examples/
+redis-stable/deps/hiredis/examples/example-libev.c
+redis-stable/deps/hiredis/examples/example-qt.h
+redis-stable/deps/hiredis/examples/example.c
+redis-stable/deps/hiredis/examples/example-macosx.c
+redis-stable/deps/hiredis/examples/example-ivykis.c
+redis-stable/deps/hiredis/examples/example-libuv.c
+redis-stable/deps/hiredis/examples/example-ae.c
+redis-stable/deps/hiredis/examples/example-libevent.c
+redis-stable/deps/hiredis/examples/example-glib.c
+redis-stable/deps/hiredis/examples/example-qt.cpp
+redis-stable/deps/hiredis/README.md
+redis-stable/deps/hiredis/hiredis.h
+redis-stable/deps/hiredis/COPYING
+redis-stable/deps/hiredis/net.c
+redis-stable/deps/hiredis/.travis.yml
+redis-stable/deps/hiredis/.gitignore
+redis-stable/deps/hiredis/adapters/
+redis-stable/deps/hiredis/adapters/libev.h
+redis-stable/deps/hiredis/adapters/libuv.h
+redis-stable/deps/hiredis/adapters/qt.h
+redis-stable/deps/hiredis/adapters/ivykis.h
+redis-stable/deps/hiredis/adapters/libevent.h
+redis-stable/deps/hiredis/adapters/glib.h
+redis-stable/deps/hiredis/adapters/macosx.h
+redis-stable/deps/hiredis/adapters/ae.h
+redis-stable/deps/hiredis/dict.c
+redis-stable/deps/hiredis/Makefile
+redis-stable/deps/hiredis/async.h
+redis-stable/deps/hiredis/async.c
+redis-stable/deps/hiredis/sds.h
+redis-stable/deps/README.md
+redis-stable/deps/lua/
+redis-stable/deps/lua/INSTALL
+redis-stable/deps/lua/doc/
+redis-stable/deps/lua/doc/contents.html
+redis-stable/deps/lua/doc/lua.1
+redis-stable/deps/lua/doc/lua.html
+redis-stable/deps/lua/doc/manual.html
+redis-stable/deps/lua/doc/lua.css
+redis-stable/deps/lua/doc/logo.gif
+redis-stable/deps/lua/doc/readme.html
+redis-stable/deps/lua/doc/luac.html
+redis-stable/deps/lua/doc/cover.png
+redis-stable/deps/lua/doc/luac.1
+redis-stable/deps/lua/doc/manual.css
+redis-stable/deps/lua/src/
+redis-stable/deps/lua/src/lundump.h
+redis-stable/deps/lua/src/lcode.c
+redis-stable/deps/lua/src/lobject.h
+redis-stable/deps/lua/src/lualib.h
+redis-stable/deps/lua/src/loadlib.c
+redis-stable/deps/lua/src/lcode.h
+redis-stable/deps/lua/src/lauxlib.h
+redis-stable/deps/lua/src/lzio.h
+redis-stable/deps/lua/src/lmem.h
+redis-stable/deps/lua/src/lfunc.h
+redis-stable/deps/lua/src/ltable.c
+redis-stable/deps/lua/src/lstring.c
+redis-stable/deps/lua/src/lstring.h
+redis-stable/deps/lua/src/llimits.h
+redis-stable/deps/lua/src/lua.h
+redis-stable/deps/lua/src/lapi.c
+redis-stable/deps/lua/src/lstate.c
+redis-stable/deps/lua/src/lzio.c
+redis-stable/deps/lua/src/ltm.h
+redis-stable/deps/lua/src/ldblib.c
+redis-stable/deps/lua/src/lobject.c
+redis-stable/deps/lua/src/ldebug.h
+redis-stable/deps/lua/src/lvm.c
+redis-stable/deps/lua/src/strbuf.h
+redis-stable/deps/lua/src/ldo.h
+redis-stable/deps/lua/src/ltable.h
+redis-stable/deps/lua/src/lgc.h
+redis-stable/deps/lua/src/strbuf.c
+redis-stable/deps/lua/src/linit.c
+redis-stable/deps/lua/src/lopcodes.h
+redis-stable/deps/lua/src/liolib.c
+redis-stable/deps/lua/src/lua_cmsgpack.c
+redis-stable/deps/lua/src/lvm.h
+redis-stable/deps/lua/src/ldump.c
+redis-stable/deps/lua/src/lstate.h
+redis-stable/deps/lua/src/ldebug.c
+redis-stable/deps/lua/src/lgc.c
+redis-stable/deps/lua/src/lparser.c
+redis-stable/deps/lua/src/ldo.c
+redis-stable/deps/lua/src/lua_cjson.c
+redis-stable/deps/lua/src/ltablib.c
+redis-stable/deps/lua/src/lauxlib.c
+redis-stable/deps/lua/src/lundump.c
+redis-stable/deps/lua/src/lmathlib.c
+redis-stable/deps/lua/src/lbaselib.c
+redis-stable/deps/lua/src/lparser.h
+redis-stable/deps/lua/src/ltm.c
+redis-stable/deps/lua/src/lua_struct.c
+redis-stable/deps/lua/src/luaconf.h
+redis-stable/deps/lua/src/fpconv.c
+redis-stable/deps/lua/src/llex.c
+redis-stable/deps/lua/src/lfunc.c
+redis-stable/deps/lua/src/lua_bit.c
+redis-stable/deps/lua/src/llex.h
+redis-stable/deps/lua/src/lapi.h
+redis-stable/deps/lua/src/fpconv.h
+redis-stable/deps/lua/src/lua.c
+redis-stable/deps/lua/src/loslib.c
+redis-stable/deps/lua/src/lstrlib.c
+redis-stable/deps/lua/src/Makefile
+redis-stable/deps/lua/src/luac.c
+redis-stable/deps/lua/src/lopcodes.c
+redis-stable/deps/lua/src/print.c
+redis-stable/deps/lua/src/lmem.c
+redis-stable/deps/lua/test/
+redis-stable/deps/lua/test/printf.lua
+redis-stable/deps/lua/test/fib.lua
+redis-stable/deps/lua/test/bisect.lua
+redis-stable/deps/lua/test/fibfor.lua
+redis-stable/deps/lua/test/cf.lua
+redis-stable/deps/lua/test/sort.lua
+redis-stable/deps/lua/test/globals.lua
+redis-stable/deps/lua/test/sieve.lua
+redis-stable/deps/lua/test/luac.lua
+redis-stable/deps/lua/test/xd.lua
+redis-stable/deps/lua/test/factorial.lua
+redis-stable/deps/lua/test/readonly.lua
+redis-stable/deps/lua/test/table.lua
+redis-stable/deps/lua/test/README
+redis-stable/deps/lua/test/echo.lua
+redis-stable/deps/lua/test/trace-globals.lua
+redis-stable/deps/lua/test/trace-calls.lua
+redis-stable/deps/lua/test/env.lua
+redis-stable/deps/lua/test/life.lua
+redis-stable/deps/lua/test/hello.lua
+redis-stable/deps/lua/HISTORY
+redis-stable/deps/lua/COPYRIGHT
+redis-stable/deps/lua/etc/
+redis-stable/deps/lua/etc/min.c
+redis-stable/deps/lua/etc/lua.ico
+redis-stable/deps/lua/etc/noparser.c
+redis-stable/deps/lua/etc/lua.pc
+redis-stable/deps/lua/etc/strict.lua
+redis-stable/deps/lua/etc/lua.hpp
+redis-stable/deps/lua/etc/README
+redis-stable/deps/lua/etc/luavs.bat
+redis-stable/deps/lua/etc/Makefile
+redis-stable/deps/lua/etc/all.c
+redis-stable/deps/lua/README
+redis-stable/deps/lua/Makefile
+redis-stable/deps/Makefile
+redis-stable/src/
+redis-stable/src/defrag.c
+redis-stable/src/redis-trib.rb
+redis-stable/src/rax.h
+redis-stable/src/sparkline.h
+redis-stable/src/rax_malloc.h
+redis-stable/src/localtime.c
+redis-stable/src/dict.h
+redis-stable/src/debug.c
+redis-stable/src/aof.c
+redis-stable/src/listpack_malloc.h
+redis-stable/src/crc64.c
+redis-stable/src/setproctitle.c
+redis-stable/src/bitops.c
+redis-stable/src/intset.h
+redis-stable/src/lzf.h
+redis-stable/src/sparkline.c
+redis-stable/src/zipmap.c
+redis-stable/src/replication.c
+redis-stable/src/geohash_helper.c
+redis-stable/src/slowlog.h
+redis-stable/src/latency.c
+redis-stable/src/expire.c
+redis-stable/src/util.h
+redis-stable/src/childinfo.c
+redis-stable/src/sdsalloc.h
+redis-stable/src/ae.c
+redis-stable/src/siphash.c
+redis-stable/src/notify.c
+redis-stable/src/redisassert.h
+redis-stable/src/anet.c
+redis-stable/src/ae_select.c
+redis-stable/src/hyperloglog.c
+redis-stable/src/rdb.c
+redis-stable/src/rax.c
+redis-stable/src/latency.h
+redis-stable/src/ziplist.c
+redis-stable/src/zmalloc.h
+redis-stable/src/module.c
+redis-stable/src/t_set.c
+redis-stable/src/testhelp.h
+redis-stable/src/pubsub.c
+redis-stable/src/evict.c
+redis-stable/src/debugmacro.h
+redis-stable/src/rdb.h
+redis-stable/src/bio.c
+redis-stable/src/valgrind.sup
+redis-stable/src/fmacros.h
+redis-stable/src/memtest.c
+redis-stable/src/rand.h
+redis-stable/src/geo.c
+redis-stable/src/ae_kqueue.c
+redis-stable/src/scripting.c
+redis-stable/src/help.h
+redis-stable/src/util.c
+redis-stable/src/zipmap.h
+redis-stable/src/redis-benchmark.c
+redis-stable/src/version.h
+redis-stable/src/lolwut.c
+redis-stable/src/anet.h
+redis-stable/src/ae_epoll.c
+redis-stable/src/t_list.c
+redis-stable/src/geohash.c
+redis-stable/src/t_hash.c
+redis-stable/src/stream.h
+redis-stable/src/intset.c
+redis-stable/src/lzf_c.c
+redis-stable/src/syncio.c
+redis-stable/src/sha1.h
+redis-stable/src/pqsort.h
+redis-stable/src/redis-check-rdb.c
+redis-stable/src/geohash.h
+redis-stable/src/lazyfree.c
+redis-stable/src/listpack.h
+redis-stable/src/ziplist.h
+redis-stable/src/server.c
+redis-stable/src/t_stream.c
+redis-stable/src/cluster.h
+redis-stable/src/sha1.c
+redis-stable/src/config.h
+redis-stable/src/sentinel.c
+redis-stable/src/release.c
+redis-stable/src/networking.c
+redis-stable/src/geohash_helper.h
+redis-stable/src/lzfP.h
+redis-stable/src/quicklist.h
+redis-stable/src/t_string.c
+redis-stable/src/endianconv.c
+redis-stable/src/slowlog.c
+redis-stable/src/object.c
+redis-stable/src/solarisfixes.h
+redis-stable/src/rand.c
+redis-stable/src/rio.c
+redis-stable/src/sds.c
+redis-stable/src/cluster.c
+redis-stable/src/rio.h
+redis-stable/src/adlist.h
+redis-stable/src/atomicvar.h
+redis-stable/src/lolwut5.c
+redis-stable/src/server.h
+redis-stable/src/endianconv.h
+redis-stable/src/pqsort.c
+redis-stable/src/blocked.c
+redis-stable/src/geo.h
+redis-stable/src/bio.h
+redis-stable/src/listpack.c
+redis-stable/src/ae_evport.c
+redis-stable/src/crc64.h
+redis-stable/src/db.c
+redis-stable/src/mkreleasehdr.sh
+redis-stable/src/ae.h
+redis-stable/src/zmalloc.c
+redis-stable/src/.gitignore
+redis-stable/src/t_zset.c
+redis-stable/src/redismodule.h
+redis-stable/src/dict.c
+redis-stable/src/quicklist.c
+redis-stable/src/Makefile
+redis-stable/src/multi.c
+redis-stable/src/config.c
+redis-stable/src/lzf_d.c
+redis-stable/src/crc16.c
+redis-stable/src/asciilogo.h
+redis-stable/src/adlist.c
+redis-stable/src/sort.c
+redis-stable/src/redis-cli.c
+redis-stable/src/sds.h
+redis-stable/src/redis-check-aof.c
+redis-stable/src/modules/
+redis-stable/src/modules/hellotimer.c
+redis-stable/src/modules/hellodict.c
+redis-stable/src/modules/gendoc.rb
+redis-stable/src/modules/hellotype.c
+redis-stable/src/modules/helloblock.c
+redis-stable/src/modules/.gitignore
+redis-stable/src/modules/hellocluster.c
+redis-stable/src/modules/helloworld.c
+redis-stable/src/modules/Makefile
+redis-stable/src/modules/testmodule.c
+redis-stable/00-RELEASENOTES
+redis-stable/runtest-sentinel
+redis-stable/runtest-moduleapi
+redis-stable/tests/
+redis-stable/tests/unit/
+redis-stable/tests/unit/moduleapi/
+redis-stable/tests/unit/moduleapi/testrdb.tcl
+redis-stable/tests/unit/moduleapi/commandfilter.tcl
+redis-stable/tests/unit/aofrw.tcl
+redis-stable/tests/unit/introspection.tcl
+redis-stable/tests/unit/limits.tcl
+redis-stable/tests/unit/latency-monitor.tcl
+redis-stable/tests/unit/bitfield.tcl
+redis-stable/tests/unit/sort.tcl
+redis-stable/tests/unit/lazyfree.tcl
+redis-stable/tests/unit/pendingquerybuf.tcl
+redis-stable/tests/unit/hyperloglog.tcl
+redis-stable/tests/unit/scan.tcl
+redis-stable/tests/unit/expire.tcl
+redis-stable/tests/unit/wait.tcl
+redis-stable/tests/unit/scripting.tcl
+redis-stable/tests/unit/slowlog.tcl
+redis-stable/tests/unit/dump.tcl
+redis-stable/tests/unit/protocol.tcl
+redis-stable/tests/unit/geo.tcl
+redis-stable/tests/unit/maxmemory.tcl
+redis-stable/tests/unit/auth.tcl
+redis-stable/tests/unit/quit.tcl
+redis-stable/tests/unit/other.tcl
+redis-stable/tests/unit/introspection-2.tcl
+redis-stable/tests/unit/obuf-limits.tcl
+redis-stable/tests/unit/memefficiency.tcl
+redis-stable/tests/unit/type/
+redis-stable/tests/unit/type/list.tcl
+redis-stable/tests/unit/type/incr.tcl
+redis-stable/tests/unit/type/string.tcl
+redis-stable/tests/unit/type/stream.tcl
+redis-stable/tests/unit/type/stream-cgroups.tcl
+redis-stable/tests/unit/type/list-2.tcl
+redis-stable/tests/unit/type/zset.tcl
+redis-stable/tests/unit/type/set.tcl
+redis-stable/tests/unit/type/hash.tcl
+redis-stable/tests/unit/type/list-3.tcl
+redis-stable/tests/unit/type/list-common.tcl
+redis-stable/tests/unit/keyspace.tcl
+redis-stable/tests/unit/pubsub.tcl
+redis-stable/tests/unit/printver.tcl
+redis-stable/tests/unit/multi.tcl
+redis-stable/tests/unit/bitops.tcl
+redis-stable/tests/integration/
+redis-stable/tests/integration/logging.tcl
+redis-stable/tests/integration/aof-race.tcl
+redis-stable/tests/integration/redis-cli.tcl
+redis-stable/tests/integration/replication-3.tcl
+redis-stable/tests/integration/replication-psync.tcl
+redis-stable/tests/integration/psync2.tcl
+redis-stable/tests/integration/rdb.tcl
+redis-stable/tests/integration/convert-zipmap-hash-on-load.tcl
+redis-stable/tests/integration/psync2-reg.tcl
+redis-stable/tests/integration/replication.tcl
+redis-stable/tests/integration/aof.tcl
+redis-stable/tests/integration/block-repl.tcl
+redis-stable/tests/integration/replication-4.tcl
+redis-stable/tests/integration/replication-2.tcl
+redis-stable/tests/cluster/
+redis-stable/tests/cluster/cluster.tcl
+redis-stable/tests/cluster/tmp/
+redis-stable/tests/cluster/tmp/.gitignore
+redis-stable/tests/cluster/tests/
+redis-stable/tests/cluster/tests/10-manual-failover.tcl
+redis-stable/tests/cluster/tests/03-failover-loop.tcl
+redis-stable/tests/cluster/tests/08-update-msg.tcl
+redis-stable/tests/cluster/tests/11-manual-takeover.tcl
+redis-stable/tests/cluster/tests/06-slave-stop-cond.tcl
+redis-stable/tests/cluster/tests/05-slave-selection.tcl
+redis-stable/tests/cluster/tests/includes/
+redis-stable/tests/cluster/tests/includes/init-tests.tcl
+redis-stable/tests/cluster/tests/helpers/
+redis-stable/tests/cluster/tests/helpers/onlydots.tcl
+redis-stable/tests/cluster/tests/07-replica-migration.tcl
+redis-stable/tests/cluster/tests/01-faildet.tcl
+redis-stable/tests/cluster/tests/04-resharding.tcl
+redis-stable/tests/cluster/tests/13-no-failover-option.tcl
+redis-stable/tests/cluster/tests/09-pubsub.tcl
+redis-stable/tests/cluster/tests/02-failover.tcl
+redis-stable/tests/cluster/tests/00-base.tcl
+redis-stable/tests/cluster/tests/12-replica-migration-2.tcl
+redis-stable/tests/cluster/run.tcl
+redis-stable/tests/support/
+redis-stable/tests/support/server.tcl
+redis-stable/tests/support/util.tcl
+redis-stable/tests/support/tmpfile.tcl
+redis-stable/tests/support/cluster.tcl
+redis-stable/tests/support/redis.tcl
+redis-stable/tests/support/test.tcl
+redis-stable/tests/assets/
+redis-stable/tests/assets/default.conf
+redis-stable/tests/assets/encodings.rdb
+redis-stable/tests/assets/hash-zipmap.rdb
+redis-stable/tests/helpers/
+redis-stable/tests/helpers/bg_block_op.tcl
+redis-stable/tests/helpers/gen_write_load.tcl
+redis-stable/tests/helpers/bg_complex_data.tcl
+redis-stable/tests/tmp/
+redis-stable/tests/tmp/.gitignore
+redis-stable/tests/instances.tcl
+redis-stable/tests/test_helper.tcl
+redis-stable/tests/sentinel/
+redis-stable/tests/sentinel/tmp/
+redis-stable/tests/sentinel/tmp/.gitignore
+redis-stable/tests/sentinel/tests/
+redis-stable/tests/sentinel/tests/05-manual.tcl
+redis-stable/tests/sentinel/tests/07-down-conditions.tcl
+redis-stable/tests/sentinel/tests/includes/
+redis-stable/tests/sentinel/tests/includes/init-tests.tcl
+redis-stable/tests/sentinel/tests/03-runtime-reconf.tcl
+redis-stable/tests/sentinel/tests/00-base.tcl
+redis-stable/tests/sentinel/tests/01-conf-update.tcl
+redis-stable/tests/sentinel/tests/06-ckquorum.tcl
+redis-stable/tests/sentinel/tests/02-slaves-reconf.tcl
+redis-stable/tests/sentinel/tests/04-slave-selection.tcl
+redis-stable/tests/sentinel/run.tcl
+redis-stable/tests/modules/
+redis-stable/tests/modules/commandfilter.c
+redis-stable/tests/modules/Makefile
+redis-stable/tests/modules/testrdb.c
+redis-stable/runtest
+redis-stable/README.md
+redis-stable/utils/
+redis-stable/utils/install_server.sh
+redis-stable/utils/redis_init_script
+redis-stable/utils/hashtable/
+redis-stable/utils/hashtable/rehashing.c
+redis-stable/utils/hashtable/README
+redis-stable/utils/redis-sha1.rb
+redis-stable/utils/corrupt_rdb.c
+redis-stable/utils/redis_init_script.tpl
+redis-stable/utils/speed-regression.tcl
+redis-stable/utils/releasetools/
+redis-stable/utils/releasetools/01_create_tarball.sh
+redis-stable/utils/releasetools/04_release_hash.sh
+redis-stable/utils/releasetools/02_upload_tarball.sh
+redis-stable/utils/releasetools/changelog.tcl
+redis-stable/utils/releasetools/03_test_release.sh
+redis-stable/utils/create-cluster/
+redis-stable/utils/create-cluster/create-cluster
+redis-stable/utils/create-cluster/README
+redis-stable/utils/create-cluster/.gitignore
+redis-stable/utils/redis-copy.rb
+redis-stable/utils/lru/
+redis-stable/utils/lru/test-lru.rb
+redis-stable/utils/lru/lfu-simulation.c
+redis-stable/utils/lru/README
+redis-stable/utils/hyperloglog/
+redis-stable/utils/hyperloglog/hll-gnuplot-graph.rb
+redis-stable/utils/hyperloglog/hll-err.rb
+redis-stable/utils/hyperloglog/.gitignore
+redis-stable/utils/graphs/
+redis-stable/utils/graphs/commits-over-time/
+redis-stable/utils/graphs/commits-over-time/README.md
+redis-stable/utils/graphs/commits-over-time/genhtml.tcl
+redis-stable/utils/build-static-symbols.tcl
+redis-stable/utils/whatisdoing.sh
+redis-stable/utils/generate-command-help.rb
+redis-stable/utils/cluster_fail_time.tcl
+redis-stable/COPYING
+redis-stable/.gitignore
+redis-stable/BUGS
+redis-stable/Makefile
+redis-stable/MANIFESTO
+redis-stable/CONTRIBUTING
+redis-stable/redis.conf
+redis-stable/runtest-cluster
+[hadoop@ip-172-31-0-231 ~]$ cd redis-stable
+[hadoop@ip-172-31-0-231 redis-stable]$ make
+cd src && make all
+make[1]: Entering directory `/home/hadoop/redis-stable/src'
+    CC Makefile.dep
+make[1]: Leaving directory `/home/hadoop/redis-stable/src'
+make[1]: Entering directory `/home/hadoop/redis-stable/src'
+rm -rf redis-server redis-sentinel redis-cli redis-benchmark redis-check-rdb redis-check-aof *.o *.gcda *.gcno *.gcov redis.info lcov-html Makefile.dep dict-benchma    rk
+(cd ../deps && make distclean)
+make[2]: Entering directory `/home/hadoop/redis-stable/deps'
+(cd hiredis && make clean) > /dev/null || true
+(cd linenoise && make clean) > /dev/null || true
+(cd lua && make clean) > /dev/null || true
+(cd jemalloc && [ -f Makefile ] && make distclean) > /dev/null || true
+(rm -f .make-*)
+make[2]: Leaving directory `/home/hadoop/redis-stable/deps'
+(rm -f .make-*)
+echo STD=-std=c99 -pedantic -DREDIS_STATIC='' >> .make-settings
+echo WARN=-Wall -W -Wno-missing-field-initializers >> .make-settings
+echo OPT=-O2 >> .make-settings
+echo MALLOC=jemalloc >> .make-settings
+echo CFLAGS= >> .make-settings
+echo LDFLAGS= >> .make-settings
+echo REDIS_CFLAGS= >> .make-settings
+echo REDIS_LDFLAGS= >> .make-settings
+echo PREV_FINAL_CFLAGS=-std=c99 -pedantic -DREDIS_STATIC='' -Wall -W -Wno-missing-field-initializers -O2 -g -ggdb   -I../deps/hiredis -I../deps/linenoise -I../deps/    lua/src -DUSE_JEMALLOC -I../deps/jemalloc/include >> .make-settings
+echo PREV_FINAL_LDFLAGS=  -g -ggdb -rdynamic >> .make-settings
+(cd ../deps && make hiredis linenoise lua jemalloc)
+make[2]: Entering directory `/home/hadoop/redis-stable/deps'
+(cd hiredis && make clean) > /dev/null || true
+(cd linenoise && make clean) > /dev/null || true
+(cd lua && make clean) > /dev/null || true
+(cd jemalloc && [ -f Makefile ] && make distclean) > /dev/null || true
+(rm -f .make-*)
+(echo "" > .make-cflags)
+(echo "" > .make-ldflags)
+MAKE hiredis
+cd hiredis && make static
+make[3]: Entering directory `/home/hadoop/redis-stable/deps/hiredis'
+cc -std=c99 -pedantic -c -O3 -fPIC  -Wall -W -Wstrict-prototypes -Wwrite-strings -g -ggdb  net.c
+cc -std=c99 -pedantic -c -O3 -fPIC  -Wall -W -Wstrict-prototypes -Wwrite-strings -g -ggdb  hiredis.c
+cc -std=c99 -pedantic -c -O3 -fPIC  -Wall -W -Wstrict-prototypes -Wwrite-strings -g -ggdb  sds.c
+cc -std=c99 -pedantic -c -O3 -fPIC  -Wall -W -Wstrict-prototypes -Wwrite-strings -g -ggdb  async.c
+cc -std=c99 -pedantic -c -O3 -fPIC  -Wall -W -Wstrict-prototypes -Wwrite-strings -g -ggdb  read.c
+ar rcs libhiredis.a net.o hiredis.o sds.o async.o read.o
+make[3]: Leaving directory `/home/hadoop/redis-stable/deps/hiredis'
+MAKE linenoise
+cd linenoise && make
+make[3]: Entering directory `/home/hadoop/redis-stable/deps/linenoise'
+cc  -Wall -Os -g  -c linenoise.c
+make[3]: Leaving directory `/home/hadoop/redis-stable/deps/linenoise'
+MAKE lua
+cd lua/src && make all CFLAGS="-O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC='' " MYLDFLAGS="" AR="ar rcu"
+make[3]: Entering directory `/home/hadoop/redis-stable/deps/lua/src'
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o lapi.o lapi.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o lcode.o lcode.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o ldebug.o ldebug.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o ldo.o ldo.c
+ldo.c: In function ‘f_parser’:
+ldo.c:496:7: warning: unused variable ‘c’ [-Wunused-variable]
+   int c = luaZ_lookahead(p->z);
+       ^
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o ldump.o ldump.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o lfunc.o lfunc.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o lgc.o lgc.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o llex.o llex.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o lmem.o lmem.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o lobject.o lobject.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o lopcodes.o lopcodes.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o lparser.o lparser.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o lstate.o lstate.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o lstring.o lstring.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o ltable.o ltable.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o ltm.o ltm.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o lundump.o lundump.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o lvm.o lvm.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o lzio.o lzio.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o strbuf.o strbuf.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o fpconv.o fpconv.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o lauxlib.o lauxlib.c
+lauxlib.c: In function ‘luaL_loadfile’:
+lauxlib.c:577:4: warning: this ‘while’ clause does not guard... [-Wmisleading-indentation]
+    while ((c = getc(lf.f)) != EOF && c != LUA_SIGNATURE[0]) ;
+    ^~~~~
+lauxlib.c:578:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘while’
+     lf.extraline = 0;
+     ^~
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o lbaselib.o lbaselib.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o ldblib.o ldblib.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o liolib.o liolib.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o lmathlib.o lmathlib.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o loslib.o loslib.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o ltablib.o ltablib.c
+ltablib.c: In function ‘addfield’:
+ltablib.c:137:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   if (!lua_isstring(L, -1))
+   ^~
+ltablib.c:140:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+     luaL_addvalue(b);
+     ^~~~~~~~~~~~~
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o lstrlib.o lstrlib.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o loadlib.o loadlib.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o linit.o linit.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o lua_cjson.o lua_cjson.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o lua_struct.o lua_struct.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o lua_cmsgpack.o lua_cmsgpack.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o lua_bit.o lua_bit.c
+ar rcu liblua.a lapi.o lcode.o ldebug.o ldo.o ldump.o lfunc.o lgc.o llex.o lmem.o lobject.o lopcodes.o lparser.o lstate.o lstring.o ltable.o ltm.o lundump.o lvm.o l    zio.o strbuf.o fpconv.o lauxlib.o lbaselib.o ldblib.o liolib.o lmathlib.o loslib.o ltablib.o lstrlib.o loadlib.o linit.o lua_cjson.o lua_struct.o lua_cmsgpack.o lua    _bit.o  # DLL needs all object files
+ranlib liblua.a
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o lua.o lua.c
+cc -o lua  lua.o liblua.a -lm
+liblua.a(loslib.o): In function `os_tmpname':
+loslib.c:(.text+0x27c): warning: the use of `tmpnam' is dangerous, better use `mkstemp'
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o luac.o luac.c
+cc -O2 -Wall -DLUA_ANSI -DENABLE_CJSON_GLOBAL -DREDIS_STATIC=''    -c -o print.o print.c
+cc -o luac  luac.o print.o liblua.a -lm
+make[3]: Leaving directory `/home/hadoop/redis-stable/deps/lua/src'
+MAKE jemalloc
+cd jemalloc && ./configure --with-version=5.1.0-0-g0 --with-lg-quantum=3 --with-jemalloc-prefix=je_ --enable-cc-silence CFLAGS="-std=gnu99 -Wall -pipe -g3 -O3 -funr    oll-loops " LDFLAGS=""
+configure: WARNING: unrecognized options: --enable-cc-silence
+checking for xsltproc... /usr/bin/xsltproc
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables...
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether compiler is cray... no
+checking whether compiler supports -std=gnu11... yes
+checking whether compiler supports -Wall... yes
+checking whether compiler supports -Wshorten-64-to-32... no
+checking whether compiler supports -Wsign-compare... yes
+checking whether compiler supports -Wundef... yes
+checking whether compiler supports -Wno-format-zero-length... yes
+checking whether compiler supports -pipe... yes
+checking whether compiler supports -g3... yes
+checking how to run the C preprocessor... gcc -E
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking whether g++ supports C++14 features by default... yes
+checking whether compiler supports -Wall... yes
+checking whether compiler supports -g3... yes
+checking whether libstdc++ linkage is compilable... yes
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking whether byte ordering is bigendian... no
+checking size of void *... 8
+checking size of int... 4
+checking size of long... 8
+checking size of long long... 8
+checking size of intmax_t... 8
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking whether pause instruction is compilable... yes
+checking number of significant virtual address bits... 48
+checking for ar... ar
+checking for nm... nm
+checking for gawk... gawk
+checking malloc.h usability... yes
+checking malloc.h presence... yes
+checking for malloc.h... yes
+checking whether malloc_usable_size definition can use const argument... no
+checking for library containing log... -lm
+checking whether __attribute__ syntax is compilable... yes
+checking whether compiler supports -fvisibility=hidden... yes
+checking whether compiler supports -fvisibility=hidden... yes
+checking whether compiler supports -Werror... yes
+checking whether compiler supports -herror_on_warning... no
+checking whether tls_model attribute is compilable... yes
+checking whether compiler supports -Werror... yes
+checking whether compiler supports -herror_on_warning... no
+checking whether alloc_size attribute is compilable... yes
+checking whether compiler supports -Werror... yes
+checking whether compiler supports -herror_on_warning... no
+checking whether format(gnu_printf, ...) attribute is compilable... yes
+checking whether compiler supports -Werror... yes
+checking whether compiler supports -herror_on_warning... no
+checking whether format(printf, ...) attribute is compilable... yes
+checking for a BSD-compatible install... /usr/bin/install -c
+checking for ranlib... ranlib
+checking for ld... /usr/bin/ld
+checking for autoconf... false
+checking for memalign... yes
+checking for valloc... yes
+checking whether compiler supports -O3... yes
+checking whether compiler supports -O3... yes
+checking whether compiler supports -funroll-loops... yes
+checking configured backtracing method... N/A
+checking for sbrk... yes
+checking whether utrace(2) is compilable... no
+checking whether a program using __builtin_unreachable is compilable... yes
+checking whether a program using __builtin_ffsl is compilable... yes
+checking LG_PAGE... 12
+checking pthread.h usability... yes
+checking pthread.h presence... yes
+checking for pthread.h... yes
+checking for pthread_create in -lpthread... yes
+checking dlfcn.h usability... yes
+checking dlfcn.h presence... yes
+checking for dlfcn.h... yes
+checking for dlsym... no
+checking for dlsym in -ldl... yes
+checking whether pthread_atfork(3) is compilable... yes
+checking whether pthread_setname_np(3) is compilable... yes
+checking for library containing clock_gettime... none required
+checking whether clock_gettime(CLOCK_MONOTONIC_COARSE, ...) is compilable... yes
+checking whether clock_gettime(CLOCK_MONOTONIC, ...) is compilable... yes
+checking whether mach_absolute_time() is compilable... no
+checking whether compiler supports -Werror... yes
+checking whether syscall(2) is compilable... yes
+checking for secure_getenv... yes
+checking for sched_getcpu... yes
+checking for sched_setaffinity... yes
+checking for issetugid... no
+checking for _malloc_thread_cleanup... no
+checking for _pthread_mutex_init_calloc_cb... no
+checking for TLS... yes
+checking whether C11 atomics is compilable... no
+checking whether GCC __atomic atomics is compilable... yes
+checking whether GCC __sync atomics is compilable... yes
+checking whether Darwin OSAtomic*() is compilable... no
+checking whether madvise(2) is compilable... yes
+checking whether madvise(..., MADV_FREE) is compilable... no
+checking whether madvise(..., MADV_DONTNEED) is compilable... yes
+checking whether madvise(..., MADV_DO[NT]DUMP) is compilable... yes
+checking whether madvise(..., MADV_[NO]HUGEPAGE) is compilable... yes
+checking whether to force 32-bit __sync_{add,sub}_and_fetch()... no
+checking whether to force 64-bit __sync_{add,sub}_and_fetch()... no
+checking for __builtin_clz... yes
+checking whether Darwin os_unfair_lock_*() is compilable... no
+checking whether Darwin OSSpin*() is compilable... no
+checking whether glibc malloc hook is compilable... yes
+checking whether glibc memalign hook is compilable... yes
+checking whether pthreads adaptive mutexes is compilable... yes
+checking whether compiler supports -D_GNU_SOURCE... yes
+checking whether compiler supports -Werror... yes
+checking whether compiler supports -herror_on_warning... no
+checking whether strerror_r returns char with gnu source is compilable... yes
+checking for stdbool.h that conforms to C99... yes
+checking for _Bool... yes
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating jemalloc.pc
+config.status: creating doc/html.xsl
+config.status: creating doc/manpages.xsl
+config.status: creating doc/jemalloc.xml
+config.status: creating include/jemalloc/jemalloc_macros.h
+config.status: creating include/jemalloc/jemalloc_protos.h
+config.status: creating include/jemalloc/jemalloc_typedefs.h
+config.status: creating include/jemalloc/internal/jemalloc_preamble.h
+config.status: creating test/test.sh
+config.status: creating test/include/test/jemalloc_test.h
+config.status: creating config.stamp
+config.status: creating bin/jemalloc-config
+config.status: creating bin/jemalloc.sh
+config.status: creating bin/jeprof
+config.status: creating include/jemalloc/jemalloc_defs.h
+config.status: creating include/jemalloc/internal/jemalloc_internal_defs.h
+config.status: creating test/include/test/jemalloc_test_defs.h
+config.status: executing include/jemalloc/internal/public_symbols.txt commands
+config.status: executing include/jemalloc/internal/private_symbols.awk commands
+config.status: executing include/jemalloc/internal/private_symbols_jet.awk commands
+config.status: executing include/jemalloc/internal/public_namespace.h commands
+config.status: executing include/jemalloc/internal/public_unnamespace.h commands
+config.status: executing include/jemalloc/internal/size_classes.h commands
+config.status: executing include/jemalloc/jemalloc_protos_jet.h commands
+config.status: executing include/jemalloc/jemalloc_rename.h commands
+config.status: executing include/jemalloc/jemalloc_mangle.h commands
+config.status: executing include/jemalloc/jemalloc_mangle_jet.h commands
+config.status: executing include/jemalloc/jemalloc.h commands
+configure: WARNING: unrecognized options: --enable-cc-silence
+===============================================================================
+jemalloc version   : 5.1.0-0-g0
+library revision   : 2
+
+CONFIG             : --with-version=5.1.0-0-g0 --with-lg-quantum=3 --with-jemalloc-prefix=je_ --enable-cc-silence 'CFLAGS=-std=gnu99 -Wall -pipe -g3 -O3 -funroll-lo    ops ' LDFLAGS=
+CC                 : gcc
+CONFIGURE_CFLAGS   : -std=gnu11 -Wall -Wsign-compare -Wundef -Wno-format-zero-length -pipe -g3 -fvisibility=hidden -O3 -funroll-loops
+SPECIFIED_CFLAGS   : -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops
+EXTRA_CFLAGS       :
+CPPFLAGS           : -D_GNU_SOURCE -D_REENTRANT
+CXX                : g++
+CONFIGURE_CXXFLAGS : -Wall -g3 -fvisibility=hidden -O3
+SPECIFIED_CXXFLAGS :
+EXTRA_CXXFLAGS     :
+LDFLAGS            :
+EXTRA_LDFLAGS      :
+DSO_LDFLAGS        : -shared -Wl,-soname,$(@F)
+LIBS               : -lm -lstdc++ -lpthread -ldl
+RPATH_EXTRA        :
+
+XSLTPROC           : /usr/bin/xsltproc
+XSLROOT            :
+
+PREFIX             : /usr/local
+BINDIR             : /usr/local/bin
+DATADIR            : /usr/local/share
+INCLUDEDIR         : /usr/local/include
+LIBDIR             : /usr/local/lib
+MANDIR             : /usr/local/share/man
+
+srcroot            :
+abs_srcroot        : /home/hadoop/redis-stable/deps/jemalloc/
+objroot            :
+abs_objroot        : /home/hadoop/redis-stable/deps/jemalloc/
+
+JEMALLOC_PREFIX    : je_
+JEMALLOC_PRIVATE_NAMESPACE
+                   : je_
+install_suffix     :
+malloc_conf        :
+autogen            : 0
+debug              : 0
+stats              : 1
+prof               : 0
+prof-libunwind     : 0
+prof-libgcc        : 0
+prof-gcc           : 0
+fill               : 1
+utrace             : 0
+xmalloc            : 0
+log                : 0
+lazy_lock          : 0
+cache-oblivious    : 1
+cxx                : 1
+===============================================================================
+cd jemalloc && make CFLAGS="-std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops " LDFLAGS="" lib/libjemalloc.a
+make[3]: Entering directory `/home/hadoop/redis-stable/deps/jemalloc'
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -DJEMALLOC_NO_PRIVATE_NAMESPACE -o src/jemalloc.sym.o src/jemal    loc.c
+nm -a src/jemalloc.sym.o | gawk -f include/jemalloc/internal/private_symbols.awk > src/jemalloc.sym
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -DJEMALLOC_NO_PRIVATE_NAMESPACE -o src/arena.sym.o src/arena.c
+nm -a src/arena.sym.o | gawk -f include/jemalloc/internal/private_symbols.awk > src/arena.sym
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -DJEMALLOC_NO_PRIVATE_NAMESPACE -o src/background_thread.sym.o     src/background_thread.c
+nm -a src/background_thread.sym.o | gawk -f include/jemalloc/internal/private_symbols.awk > src/background_thread.sym
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -DJEMALLOC_NO_PRIVATE_NAMESPACE -o src/base.sym.o src/base.c
+nm -a src/base.sym.o | gawk -f include/jemalloc/internal/private_symbols.awk > src/base.sym
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -DJEMALLOC_NO_PRIVATE_NAMESPACE -o src/bin.sym.o src/bin.c
+nm -a src/bin.sym.o | gawk -f include/jemalloc/internal/private_symbols.awk > src/bin.sym
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -DJEMALLOC_NO_PRIVATE_NAMESPACE -o src/bitmap.sym.o src/bitmap.    c
+nm -a src/bitmap.sym.o | gawk -f include/jemalloc/internal/private_symbols.awk > src/bitmap.sym
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -DJEMALLOC_NO_PRIVATE_NAMESPACE -o src/ckh.sym.o src/ckh.c
+nm -a src/ckh.sym.o | gawk -f include/jemalloc/internal/private_symbols.awk > src/ckh.sym
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -DJEMALLOC_NO_PRIVATE_NAMESPACE -o src/ctl.sym.o src/ctl.c
+nm -a src/ctl.sym.o | gawk -f include/jemalloc/internal/private_symbols.awk > src/ctl.sym
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -DJEMALLOC_NO_PRIVATE_NAMESPACE -o src/div.sym.o src/div.c
+nm -a src/div.sym.o | gawk -f include/jemalloc/internal/private_symbols.awk > src/div.sym
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -DJEMALLOC_NO_PRIVATE_NAMESPACE -o src/extent.sym.o src/extent.    c
+nm -a src/extent.sym.o | gawk -f include/jemalloc/internal/private_symbols.awk > src/extent.sym
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -DJEMALLOC_NO_PRIVATE_NAMESPACE -o src/extent_dss.sym.o src/ext    ent_dss.c
+nm -a src/extent_dss.sym.o | gawk -f include/jemalloc/internal/private_symbols.awk > src/extent_dss.sym
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -DJEMALLOC_NO_PRIVATE_NAMESPACE -o src/extent_mmap.sym.o src/ex    tent_mmap.c
+nm -a src/extent_mmap.sym.o | gawk -f include/jemalloc/internal/private_symbols.awk > src/extent_mmap.sym
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -DJEMALLOC_NO_PRIVATE_NAMESPACE -o src/hash.sym.o src/hash.c
+nm -a src/hash.sym.o | gawk -f include/jemalloc/internal/private_symbols.awk > src/hash.sym
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -DJEMALLOC_NO_PRIVATE_NAMESPACE -o src/hooks.sym.o src/hooks.c
+nm -a src/hooks.sym.o | gawk -f include/jemalloc/internal/private_symbols.awk > src/hooks.sym
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -DJEMALLOC_NO_PRIVATE_NAMESPACE -o src/large.sym.o src/large.c
+nm -a src/large.sym.o | gawk -f include/jemalloc/internal/private_symbols.awk > src/large.sym
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -DJEMALLOC_NO_PRIVATE_NAMESPACE -o src/log.sym.o src/log.c
+nm -a src/log.sym.o | gawk -f include/jemalloc/internal/private_symbols.awk > src/log.sym
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -DJEMALLOC_NO_PRIVATE_NAMESPACE -o src/malloc_io.sym.o src/mall    oc_io.c
+nm -a src/malloc_io.sym.o | gawk -f include/jemalloc/internal/private_symbols.awk > src/malloc_io.sym
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -DJEMALLOC_NO_PRIVATE_NAMESPACE -o src/mutex.sym.o src/mutex.c
+nm -a src/mutex.sym.o | gawk -f include/jemalloc/internal/private_symbols.awk > src/mutex.sym
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -DJEMALLOC_NO_PRIVATE_NAMESPACE -o src/mutex_pool.sym.o src/mut    ex_pool.c
+nm -a src/mutex_pool.sym.o | gawk -f include/jemalloc/internal/private_symbols.awk > src/mutex_pool.sym
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -DJEMALLOC_NO_PRIVATE_NAMESPACE -o src/nstime.sym.o src/nstime.    c
+nm -a src/nstime.sym.o | gawk -f include/jemalloc/internal/private_symbols.awk > src/nstime.sym
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -DJEMALLOC_NO_PRIVATE_NAMESPACE -o src/pages.sym.o src/pages.c
+nm -a src/pages.sym.o | gawk -f include/jemalloc/internal/private_symbols.awk > src/pages.sym
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -DJEMALLOC_NO_PRIVATE_NAMESPACE -o src/prng.sym.o src/prng.c
+nm -a src/prng.sym.o | gawk -f include/jemalloc/internal/private_symbols.awk > src/prng.sym
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -DJEMALLOC_NO_PRIVATE_NAMESPACE -o src/prof.sym.o src/prof.c
+nm -a src/prof.sym.o | gawk -f include/jemalloc/internal/private_symbols.awk > src/prof.sym
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -DJEMALLOC_NO_PRIVATE_NAMESPACE -o src/rtree.sym.o src/rtree.c
+nm -a src/rtree.sym.o | gawk -f include/jemalloc/internal/private_symbols.awk > src/rtree.sym
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -DJEMALLOC_NO_PRIVATE_NAMESPACE -o src/stats.sym.o src/stats.c
+nm -a src/stats.sym.o | gawk -f include/jemalloc/internal/private_symbols.awk > src/stats.sym
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -DJEMALLOC_NO_PRIVATE_NAMESPACE -o src/sz.sym.o src/sz.c
+nm -a src/sz.sym.o | gawk -f include/jemalloc/internal/private_symbols.awk > src/sz.sym
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -DJEMALLOC_NO_PRIVATE_NAMESPACE -o src/tcache.sym.o src/tcache.    c
+nm -a src/tcache.sym.o | gawk -f include/jemalloc/internal/private_symbols.awk > src/tcache.sym
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -DJEMALLOC_NO_PRIVATE_NAMESPACE -o src/ticker.sym.o src/ticker.    c
+nm -a src/ticker.sym.o | gawk -f include/jemalloc/internal/private_symbols.awk > src/ticker.sym
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -DJEMALLOC_NO_PRIVATE_NAMESPACE -o src/tsd.sym.o src/tsd.c
+nm -a src/tsd.sym.o | gawk -f include/jemalloc/internal/private_symbols.awk > src/tsd.sym
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -DJEMALLOC_NO_PRIVATE_NAMESPACE -o src/witness.sym.o src/witnes    s.c
+nm -a src/witness.sym.o | gawk -f include/jemalloc/internal/private_symbols.awk > src/witness.sym
+/bin/sh include/jemalloc/internal/private_namespace.sh src/jemalloc.sym src/arena.sym src/background_thread.sym src/base.sym src/bin.sym src/bitmap.sym src/ckh.sym     src/ctl.sym src/div.sym src/extent.sym src/extent_dss.sym src/extent_mmap.sym src/hash.sym src/hooks.sym src/large.sym src/log.sym src/malloc_io.sym src/mutex.sym s    rc/mutex_pool.sym src/nstime.sym src/pages.sym src/prng.sym src/prof.sym src/rtree.sym src/stats.sym src/sz.sym src/tcache.sym src/ticker.sym src/tsd.sym src/witnes    s.sym > include/jemalloc/internal/private_namespace.gen.h
+cp include/jemalloc/internal/private_namespace.gen.h include/jemalloc/internal/private_namespace.gen.h
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/jemalloc.o src/jemalloc.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/arena.o src/arena.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/background_thread.o src/background_thread.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/base.o src/base.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/bin.o src/bin.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/bitmap.o src/bitmap.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/ckh.o src/ckh.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/ctl.o src/ctl.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/div.o src/div.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/extent.o src/extent.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/extent_dss.o src/extent_dss.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/extent_mmap.o src/extent_mmap.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/hash.o src/hash.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/hooks.o src/hooks.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/large.o src/large.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/log.o src/log.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/malloc_io.o src/malloc_io.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/mutex.o src/mutex.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/mutex_pool.o src/mutex_pool.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/nstime.o src/nstime.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/pages.o src/pages.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/prng.o src/prng.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/prof.o src/prof.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/rtree.o src/rtree.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/stats.o src/stats.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/sz.o src/sz.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/tcache.o src/tcache.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/ticker.o src/ticker.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/tsd.o src/tsd.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/witness.o src/witness.c
+g++ -Wall -g3 -fvisibility=hidden -O3 -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/jemalloc_cpp.o src/jemalloc_cpp.cpp
+ar crus lib/libjemalloc.a src/jemalloc.o src/arena.o src/background_thread.o src/base.o src/bin.o src/bitmap.o src/ckh.o src/ctl.o src/div.o src/extent.o src/extent    _dss.o src/extent_mmap.o src/hash.o src/hooks.o src/large.o src/log.o src/malloc_io.o src/mutex.o src/mutex_pool.o src/nstime.o src/pages.o src/prng.o src/prof.o sr    c/rtree.o src/stats.o src/sz.o src/tcache.o src/ticker.o src/tsd.o src/witness.o src/jemalloc_cpp.o
+make[3]: Leaving directory `/home/hadoop/redis-stable/deps/jemalloc'
+make[2]: Leaving directory `/home/hadoop/redis-stable/deps'
+    CC adlist.o
+    CC quicklist.o
+    CC ae.o
+    CC anet.o
+    CC dict.o
+    CC server.o
+    CC sds.o
+    CC zmalloc.o
+    CC lzf_c.o
+    CC lzf_d.o
+    CC pqsort.o
+    CC zipmap.o
+    CC sha1.o
+    CC ziplist.o
+    CC release.o
+    CC networking.o
+    CC util.o
+    CC object.o
+    CC db.o
+    CC replication.o
+    CC rdb.o
+    CC t_string.o
+    CC t_list.o
+    CC t_set.o
+    CC t_zset.o
+    CC t_hash.o
+    CC config.o
+    CC aof.o
+    CC pubsub.o
+    CC multi.o
+    CC debug.o
+    CC sort.o
+    CC intset.o
+    CC syncio.o
+    CC cluster.o
+    CC crc16.o
+    CC endianconv.o
+    CC slowlog.o
+    CC scripting.o
+    CC bio.o
+    CC rio.o
+    CC rand.o
+    CC memtest.o
+    CC crc64.o
+    CC bitops.o
+    CC sentinel.o
+    CC notify.o
+    CC setproctitle.o
+    CC blocked.o
+    CC hyperloglog.o
+    CC latency.o
+    CC sparkline.o
+    CC redis-check-rdb.o
+    CC redis-check-aof.o
+    CC geo.o
+    CC lazyfree.o
+    CC module.o
+    CC evict.o
+    CC expire.o
+    CC geohash.o
+    CC geohash_helper.o
+    CC childinfo.o
+    CC defrag.o
+    CC siphash.o
+    CC rax.o
+    CC t_stream.o
+    CC listpack.o
+    CC localtime.o
+    CC lolwut.o
+    CC lolwut5.o
+    LINK redis-server
+    INSTALL redis-sentinel
+    CC redis-cli.o
+    LINK redis-cli
+    CC redis-benchmark.o
+    LINK redis-benchmark
+    INSTALL redis-check-rdb
+    INSTALL redis-check-aof
+
+Hint: It's a good idea to run 'make test' ;)
+
+make[1]: Leaving directory `/home/hadoop/redis-stable/src'
+[hadoop@ip-172-31-0-231 redis-stable]$ make test
+cd src && make test
+make[1]: Entering directory `/home/hadoop/redis-stable/src'
+    CC Makefile.dep
+make[1]: Leaving directory `/home/hadoop/redis-stable/src'
+make[1]: Entering directory `/home/hadoop/redis-stable/src'
+You need tcl 8.5 or newer in order to run the Redis test
+make[1]: *** [test] Error 1
+make[1]: Leaving directory `/home/hadoop/redis-stable/src'
+make: *** [test] Error 2
+[hadoop@ip-172-31-0-231 redis-stable]$ ^C
+[hadoop@ip-172-31-0-231 redis-stable]$ redis-server
+-bash: redis-server: command not found
+[hadoop@ip-172-31-0-231 redis-stable]$ sudo make install
+cd src && make install
+make[1]: Entering directory `/home/hadoop/redis-stable/src'
+
+Hint: It's a good idea to run 'make test' ;)
+
+    INSTALL install
+    INSTALL install
+    INSTALL install
+    INSTALL install
+    INSTALL install
+make[1]: Leaving directory `/home/hadoop/redis-stable/src'
+[hadoop@ip-172-31-0-231 redis-stable]$ make test
+cd src && make test
+make[1]: Entering directory `/home/hadoop/redis-stable/src'
+You need tcl 8.5 or newer in order to run the Redis test
+make[1]: *** [test] Error 1
+make[1]: Leaving directory `/home/hadoop/redis-stable/src'
+make: *** [test] Error 2
+[hadoop@ip-172-31-0-231 redis-stable]$ redis-server
+15313:C 02 Mar 2020 14:42:36.040 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+15313:C 02 Mar 2020 14:42:36.040 # Redis version=5.0.7, bits=64, commit=00000000, modified=0, pid=15313, just started
+15313:C 02 Mar 2020 14:42:36.040 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.co    nf
+15313:M 02 Mar 2020 14:42:36.040 # You requested maxclients of 10000 requiring at least 10032 max file descriptors.
+15313:M 02 Mar 2020 14:42:36.040 # Server can't set maximum open files to 10032 because of OS error: Operation not permitted.
+15313:M 02 Mar 2020 14:42:36.040 # Current maximum open files is 4096. maxclients has been reduced to 4064 to compensate for low ulimit. If you need higher maxclien    ts increase 'ulimit -n'.
+                _._
+           _.-``__ ''-._
+      _.-``    `.  `_.  ''-._           Redis 5.0.7 (00000000/0) 64 bit
+  .-`` .-```.  ```\/    _.,_ ''-._
+ (    '      ,       .-`  | `,    )     Running in standalone mode
+ |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6379
+ |    `-._   `._    /     _.-'    |     PID: 15313
+  `-._    `-._  `-./  _.-'    _.-'
+ |`-._`-._    `-.__.-'    _.-'_.-'|
+ |    `-._`-._        _.-'_.-'    |           http://redis.io
+  `-._    `-._`-.__.-'_.-'    _.-'
+ |`-._`-._    `-.__.-'    _.-'_.-'|
+ |    `-._`-._        _.-'_.-'    |
+  `-._    `-._`-.__.-'_.-'    _.-'
+      `-._    `-.__.-'    _.-'
+          `-._        _.-'
+              `-.__.-'
+
+15313:M 02 Mar 2020 14:42:36.041 # Server initialized
+15313:M 02 Mar 2020 14:42:36.041 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_    memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+15313:M 02 Mar 2020 14:42:36.041 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues wi    th Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain     the setting after a reboot. Redis must be restarted after THP is disabled.
+15313:M 02 Mar 2020 14:42:36.041 * Ready to accept connections
+
+
+^C15313:signal-handler (1583160179) Received SIGINT scheduling shutdown...
+15313:M 02 Mar 2020 14:42:59.278 # User requested shutdown...
+15313:M 02 Mar 2020 14:42:59.278 * Saving the final RDB snapshot before exiting.
+15313:M 02 Mar 2020 14:42:59.280 * DB saved on disk
+15313:M 02 Mar 2020 14:42:59.280 # Redis is now ready to exit, bye bye...
+[hadoop@ip-172-31-0-231 redis-stable]$ ^C
+[hadoop@ip-172-31-0-231 redis-stable]$ redis-cli ping
+Could not connect to Redis at 127.0.0.1:6379: Connection refused
+[hadoop@ip-172-31-0-231 redis-stable]$ twistd -noy hello.py &
+[1] 15731
+[hadoop@ip-172-31-0-231 redis-stable]$ Unhandled Error
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/Twisted-19.10.0-py2.7-linux-x86_64.egg/twisted/application/app.py", line 674, in run
+    runApp(config)
+  File "/usr/local/lib/python2.7/site-packages/Twisted-19.10.0-py2.7-linux-x86_64.egg/twisted/scripts/twistd.py", line 25, in runApp
+    runner.run()
+  File "/usr/local/lib/python2.7/site-packages/Twisted-19.10.0-py2.7-linux-x86_64.egg/twisted/application/app.py", line 381, in run
+    self.application = self.createOrGetApplication()
+  File "/usr/local/lib/python2.7/site-packages/Twisted-19.10.0-py2.7-linux-x86_64.egg/twisted/application/app.py", line 453, in createOrGetApplication
+    application = getApplication(self.config, passphrase)
+--- <exception caught here> ---
+  File "/usr/local/lib/python2.7/site-packages/Twisted-19.10.0-py2.7-linux-x86_64.egg/twisted/application/app.py", line 464, in getApplication
+    application = service.loadApplication(filename, style, passphrase)
+  File "/usr/local/lib/python2.7/site-packages/Twisted-19.10.0-py2.7-linux-x86_64.egg/twisted/application/service.py", line 416, in loadApplication
+    application = sob.loadValueFromFile(filename, 'application')
+  File "/usr/local/lib/python2.7/site-packages/Twisted-19.10.0-py2.7-linux-x86_64.egg/twisted/persisted/sob.py", line 173, in loadValueFromFile
+    with open(filename, 'r') as fileObj:
+exceptions.IOError: [Errno 2] No such file or directory: 'hello.py'
+
+
+Failed to load application: [Errno 2] No such file or directory: 'hello.py'
+
+
+[1]+  Exit 1                  twistd -noy hello.py
+[hadoop@ip-172-31-0-231 redis-stable]$ cd ..
+[hadoop@ip-172-31-0-231 ~]$ twistd -noy hello.py &
+[1] 15771
+[hadoop@ip-172-31-0-231 ~]$ Unhandled Error
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/Twisted-19.10.0-py2.7-linux-x86_64.egg/twisted/application/app.py", line 674, in run
+    runApp(config)
+  File "/usr/local/lib/python2.7/site-packages/Twisted-19.10.0-py2.7-linux-x86_64.egg/twisted/scripts/twistd.py", line 25, in runApp
+    runner.run()
+  File "/usr/local/lib/python2.7/site-packages/Twisted-19.10.0-py2.7-linux-x86_64.egg/twisted/application/app.py", line 381, in run
+    self.application = self.createOrGetApplication()
+  File "/usr/local/lib/python2.7/site-packages/Twisted-19.10.0-py2.7-linux-x86_64.egg/twisted/application/app.py", line 453, in createOrGetApplication
+    application = getApplication(self.config, passphrase)
+--- <exception caught here> ---
+  File "/usr/local/lib/python2.7/site-packages/Twisted-19.10.0-py2.7-linux-x86_64.egg/twisted/application/app.py", line 464, in getApplication
+    application = service.loadApplication(filename, style, passphrase)
+  File "/usr/local/lib/python2.7/site-packages/Twisted-19.10.0-py2.7-linux-x86_64.egg/twisted/application/service.py", line 416, in loadApplication
+    application = sob.loadValueFromFile(filename, 'application')
+  File "/usr/local/lib/python2.7/site-packages/Twisted-19.10.0-py2.7-linux-x86_64.egg/twisted/persisted/sob.py", line 173, in loadValueFromFile
+    with open(filename, 'r') as fileObj:
+exceptions.IOError: [Errno 2] No such file or directory: 'hello.py'
+
+
+Failed to load application: [Errno 2] No such file or directory: 'hello.py'
+
+
+[1]+  Exit 1                  twistd -noy hello.py
+[hadoop@ip-172-31-0-231 ~]$ dir
+ml-1m  ml-1m.zip  ratings.csv  redis-2.8.7  redis-2.8.7.tar.gz  redis-stable  redis-stable.tar.gz
+[hadoop@ip-172-31-0-231 ~]$ vim hello.py
+[hadoop@ip-172-31-0-231 ~]$ twistd -noy hello.py &
+[1] 16146
+[hadoop@ip-172-31-0-231 ~]$ Unhandled Error
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/Twisted-19.10.0-py2.7-linux-x86_64.egg/twisted/application/app.py", line 674, in run
+    runApp(config)
+  File "/usr/local/lib/python2.7/site-packages/Twisted-19.10.0-py2.7-linux-x86_64.egg/twisted/scripts/twistd.py", line 25, in runApp
+    runner.run()
+  File "/usr/local/lib/python2.7/site-packages/Twisted-19.10.0-py2.7-linux-x86_64.egg/twisted/application/app.py", line 381, in run
+    self.application = self.createOrGetApplication()
+  File "/usr/local/lib/python2.7/site-packages/Twisted-19.10.0-py2.7-linux-x86_64.egg/twisted/application/app.py", line 453, in createOrGetApplication
+    application = getApplication(self.config, passphrase)
+--- <exception caught here> ---
+  File "/usr/local/lib/python2.7/site-packages/Twisted-19.10.0-py2.7-linux-x86_64.egg/twisted/application/app.py", line 464, in getApplication
+    application = service.loadApplication(filename, style, passphrase)
+  File "/usr/local/lib/python2.7/site-packages/Twisted-19.10.0-py2.7-linux-x86_64.egg/twisted/application/service.py", line 416, in loadApplication
+    application = sob.loadValueFromFile(filename, 'application')
+  File "/usr/local/lib/python2.7/site-packages/Twisted-19.10.0-py2.7-linux-x86_64.egg/twisted/persisted/sob.py", line 177, in loadValueFromFile
+    eval(codeObj, d, d)
+  File "hello.py", line 18, in <module>
+    k,v = i.split('t')
+exceptions.ValueError: need more than 1 value to unpack
+
+
+Failed to load application: need more than 1 value to unpack
+
+cat: Unable to write to output stream.
+cat: Unable to write to output stream.
+cat: Unable to write to output stream.
+cat: Unable to write to output stream.
+cat: Unable to write to output stream.
+
+[1]+  Exit 1                  twistd -noy hello.py
+[hadoop@ip-172-31-0-231 ~]$ vim hello.py
+[hadoop@ip-172-31-0-231 ~]$ twistd -noy hello.py &
+[1] 16392
+[hadoop@ip-172-31-0-231 ~]$ Unhandled Error
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/Twisted-19.10.0-py2.7-linux-x86_64.egg/twisted/application/app.py", line 674, in run
+    runApp(config)
+  File "/usr/local/lib/python2.7/site-packages/Twisted-19.10.0-py2.7-linux-x86_64.egg/twisted/scripts/twistd.py", line 25, in runApp
+    runner.run()
+  File "/usr/local/lib/python2.7/site-packages/Twisted-19.10.0-py2.7-linux-x86_64.egg/twisted/application/app.py", line 381, in run
+    self.application = self.createOrGetApplication()
+  File "/usr/local/lib/python2.7/site-packages/Twisted-19.10.0-py2.7-linux-x86_64.egg/twisted/application/app.py", line 453, in createOrGetApplication
+    application = getApplication(self.config, passphrase)
+--- <exception caught here> ---
+  File "/usr/local/lib/python2.7/site-packages/Twisted-19.10.0-py2.7-linux-x86_64.egg/twisted/application/app.py", line 464, in getApplication
+    application = service.loadApplication(filename, style, passphrase)
+  File "/usr/local/lib/python2.7/site-packages/Twisted-19.10.0-py2.7-linux-x86_64.egg/twisted/application/service.py", line 416, in loadApplication
+    application = sob.loadValueFromFile(filename, 'application')
+  File "/usr/local/lib/python2.7/site-packages/Twisted-19.10.0-py2.7-linux-x86_64.egg/twisted/persisted/sob.py", line 177, in loadValueFromFile
+    eval(codeObj, d, d)
+  File "hello.py", line 21, in <module>
+    r.set(k,v)
+  File "build/bdist.linux-x86_64/egg/redis/client.py", line 1766, in set
+    return self.execute_command('SET', *pieces)
+  File "build/bdist.linux-x86_64/egg/redis/client.py", line 875, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "build/bdist.linux-x86_64/egg/redis/connection.py", line 1185, in get_connection
+    connection.connect()
+  File "build/bdist.linux-x86_64/egg/redis/connection.py", line 557, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+
+
+Failed to load application: Error 111 connecting to localhost:6379. Connection refused.
+
+cat: Unable to write to output stream.
+cat: Unable to write to output stream.
+cat: Unable to write to output stream.
+cat: Unable to write to output stream.
+cat: Unable to write to output stream.
+
+[1]+  Exit 1                  twistd -noy hello.py
+[hadoop@ip-172-31-0-231 ~]$ redis-cli
+Could not connect to Redis at 127.0.0.1:6379: Connection refused
+not connected>
+not connected> make
+Could not connect to Redis at 127.0.0.1:6379: Connection refused
+not connected> exit
+[hadoop@ip-172-31-0-231 ~]$ dir
+hello.py  ml-1m  ml-1m.zip  ratings.csv  redis-2.8.7  redis-2.8.7.tar.gz  redis-stable  redis-stable.tar.gz
+[hadoop@ip-172-31-0-231 ~]$ make
+make: *** No targets specified and no makefile found.  Stop.
+[hadoop@ip-172-31-0-231 ~]$         ./src/redis-server &
+[1] 24694
+[hadoop@ip-172-31-0-231 ~]$ -bash: ./src/redis-server: No such file or directory
+
+[1]+  Exit 127                ./src/redis-server
+[hadoop@ip-172-31-0-231 ~]$ cd redis-2.8.7
+[hadoop@ip-172-31-0-231 redis-2.8.7]$ make
+cd src && make all
+make[1]: Entering directory `/home/hadoop/redis-2.8.7/src'
+
+Hint: To run 'make test' is a good idea ;)
+
+make[1]: Leaving directory `/home/hadoop/redis-2.8.7/src'
+[hadoop@ip-172-31-0-231 redis-2.8.7]$         ./src/redis-server &
+[1] 24803
+[hadoop@ip-172-31-0-231 redis-2.8.7]$ [24803] 02 Mar 14:47:58.978 # Warning: no config file specified, using the default config. In order to specify a config file u    se ./src/redis-server /path/to/redis.conf
+[24803] 02 Mar 14:47:58.978 # Unable to set the max number of files limit to 10032 (Operation not permitted), setting the max clients configuration to 3984.
+                _._
+           _.-``__ ''-._
+      _.-``    `.  `_.  ''-._           Redis 2.8.7 (00000000/0) 64 bit
+  .-`` .-```.  ```\/    _.,_ ''-._
+ (    '      ,       .-`  | `,    )     Running in stand alone mode
+ |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6379
+ |    `-._   `._    /     _.-'    |     PID: 24803
+  `-._    `-._  `-./  _.-'    _.-'
+ |`-._`-._    `-.__.-'    _.-'_.-'|
+ |    `-._`-._        _.-'_.-'    |           http://redis.io
+  `-._    `-._`-.__.-'_.-'    _.-'
+ |`-._`-._    `-.__.-'    _.-'_.-'|
+ |    `-._`-._        _.-'_.-'    |
+  `-._    `-._`-.__.-'_.-'    _.-'
+      `-._    `-.__.-'    _.-'
+          `-._        _.-'
+              `-.__.-'
+
+[24803] 02 Mar 14:47:58.979 # Server started, Redis version 2.8.7
+[24803] 02 Mar 14:47:58.979 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memor    y = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+[24803] 02 Mar 14:47:58.979 * The server is now ready to accept connections on port 6379
+
+[hadoop@ip-172-31-0-231 redis-2.8.7]$ cd ..
+[hadoop@ip-172-31-0-231 ~]$ dir
+hello.py  ml-1m  ml-1m.zip  ratings.csv  redis-2.8.7  redis-2.8.7.tar.gz  redis-stable  redis-stable.tar.gz
+[hadoop@ip-172-31-0-231 ~]$ twistd -noy hello.py &
+[2] 25225
+[hadoop@ip-172-31-0-231 ~]$ 2020-03-02 14:49:12+0000 [-] Log opened.
+2020-03-02 14:49:12+0000 [-] Unhandled error in Deferred:
+2020-03-02 14:49:12+0000 [-] Unhandled Error
+        Traceback (most recent call last):
+          File "/usr/local/lib/python2.7/site-packages/Twisted-19.10.0-py2.7-linux-x86_64.egg/twisted/persisted/sob.py", line 177, in loadValueFromFile
+            eval(codeObj, d, d)
+          File "hello.py", line 39, in <module>
+            run("localhost", 8080)
+          File "/usr/local/lib/python2.7/site-packages/klein-19.6.0-py2.7.egg/klein/_app.py", line 437, in run
+            endpoint.listen(site)
+          File "/usr/local/lib/python2.7/site-packages/Twisted-19.10.0-py2.7-linux-x86_64.egg/twisted/internet/endpoints.py", line 495, in listen
+            interface=self._interface)
+        --- <exception caught here> ---
+          File "/usr/local/lib/python2.7/site-packages/Twisted-19.10.0-py2.7-linux-x86_64.egg/twisted/internet/defer.py", line 122, in execute
+            result = callable(*args, **kw)
+          File "/usr/local/lib/python2.7/site-packages/Twisted-19.10.0-py2.7-linux-x86_64.egg/twisted/internet/posixbase.py", line 495, in listenTCP
+            p.startListening()
+          File "/usr/local/lib/python2.7/site-packages/Twisted-19.10.0-py2.7-linux-x86_64.egg/twisted/internet/tcp.py", line 1363, in startListening
+            raise CannotListenError(self.interface, self.port, le)
+        twisted.internet.error.CannotListenError: Couldn't listen on localhost:8080: [Errno 98] Address already in use.
+
+^C
+[hadoop@ip-172-31-0-231 ~]$ vim hello.py
+[hadoop@ip-172-31-0-231 ~]$ twistd -noy hello.py &
+[3] 26796
+[hadoop@ip-172-31-0-231 ~]$ [24803] 02 Mar 14:51:22.220 * 10000 changes in 60 seconds. Saving...
+[24803] 02 Mar 14:51:22.220 * Background saving started by pid 26840
+[26840] 02 Mar 14:51:22.236 * DB saved on disk
+[26840] 02 Mar 14:51:22.237 * RDB: 0 MB of memory used by copy-on-write
+[24803] 02 Mar 14:51:22.320 * Background saving terminated with success
+2020-03-02 14:51:22+0000 [-] Log opened.
+2020-03-02 14:51:22+0000 [-] Site starting on 8081
+2020-03-02 14:51:22+0000 [-] Starting factory <twisted.web.server.Site instance at 0x7f840bc99638>
+[hadoop@ip-172-31-0-231 ~]$ curl localhost:8081/37
+2020-03-02 14:52:01+0000 [-] "127.0.0.1" - - [02/Mar/2020:14:52:00 +0000] "GET /37 HTTP/1.1" 200 126 "-" "curl/7.61.1"
+The recommendations for user 37 are [265:5.0,3168:5.0,1517:5.0,3035:5.0,2375:5.0,2243:5.0,3100:5.0,594:5.0,2506:5.0,1449:5.0]
+[hadoop@ip-172-31-0-231 ~]$
+[hadoop@ip-172-31-0-231 ~]$
+[hadoop@ip-172-31-0-231 ~]$
+[hadoop@ip-172-31-0-231 ~]$
+[hadoop@ip-172-31-0-231 ~]$
+[hadoop@ip-172-31-0-231 ~]$ curl localhost:8081/31
+2020-03-02 14:52:29+0000 [-] "127.0.0.1" - - [02/Mar/2020:14:52:29 +0000] "GET /31 HTTP/1.1" 200 128 "-" "curl/7.61.1"
+The recommendations for user 31 are [2374:5.0,1321:5.0,3035:5.0,2376:5.0,2375:5.0,2243:5.0,2110:5.0,2111:5.0,3034:5.0,3168:5.0]
+[hadoop@ip-172-31-0-231 ~]$ curl localhost:8081/38
+2020-03-02 14:52:38+0000 [-] "127.0.0.1" - - [02/Mar/2020:14:52:37 +0000] "GET /38 HTTP/1.1" 200 125 "-" "curl/7.61.1"
+The recommendations for user 38 are [529:5.0,1120:5.0,3034:5.0,265:5.0,2243:5.0,1124:5.0,594:5.0,3100:5.0,2112:5.0,1711:5.0]
+[hadoop@ip-172-31-0-231 ~]$ [24803] 02 Mar 14:56:23.073 * 100 changes in 300 seconds. Saving...
+[24803] 02 Mar 14:56:23.073 * Background saving started by pid 28566
+[28566] 02 Mar 14:56:23.086 * DB saved on disk
+[28566] 02 Mar 14:56:23.086 * RDB: 0 MB of memory used by copy-on-write
+[24803] 02 Mar 14:56:23.174 * Background saving terminated with success
+
+[hadoop@ip-172-31-0-231 ~]$ curl localhost:8081/38
+2020-03-02 14:57:10+0000 [-] "127.0.0.1" - - [02/Mar/2020:14:57:09 +0000] "GET /38 HTTP/1.1" 200 125 "-" "curl/7.61.1"
+The recommendations for user 38 are [529:5.0,1120:5.0,3034:5.0,265:5.0,2243:5.0,1124:5.0,594:5.0,3100:5.0,2112:5.0,1711:5.0]
+[hadoop@ip-172-31-0-231 ~]$ curl localhost:8081/38
+2020-03-02 15:00:05+0000 [-] "127.0.0.1" - - [02/Mar/2020:15:00:04 +0000] "GET /38 HTTP/1.1" 200 125 "-" "curl/7.61.1"
+The recommendations for user 38 are [529:5.0,1120:5.0,3034:5.0,265:5.0,2243:5.0,1124:5.0,594:5.0,3100:5.0,2112:5.0,1711:5.0]
+[hadoop@ip-172-31-0-231 ~]$ curl localhost:8081/38
+2020-03-02 15:04:10+0000 [-] "127.0.0.1" - - [02/Mar/2020:15:04:09 +0000] "GET /38 HTTP/1.1" 200 125 "-" "curl/7.61.1"
+The recommendations for user 38 are [529:5.0,1120:5.0,3034:5.0,265:5.0,2243:5.0,1124:5.0,594:5.0,3100:5.0,2112:5.0,1711:5.0]
+[hadoop@ip-172-31-0-231 ~]$ curl localhost:8081/31
+2020-03-02 15:04:17+0000 [-] "127.0.0.1" - - [02/Mar/2020:15:04:16 +0000] "GET /31 HTTP/1.1" 200 128 "-" "curl/7.61.1"
+The recommendations for user 31 are [2374:5.0,1321:5.0,3035:5.0,2376:5.0,2375:5.0,2243:5.0,2110:5.0,2111:5.0,3034:5.0,3168:5.0]
+[hadoop@ip-172-31-0-231 ~]$ curl localhost:8081/55
+2020-03-02 15:04:26+0000 [-] "127.0.0.1" - - [02/Mar/2020:15:04:25 +0000] "GET /55 HTTP/1.1" 200 126 "-" "curl/7.61.1"
+The recommendations for user 55 are [529:5.0,1385:5.0,3034:5.0,1912:5.0,1911:5.0,2046:5.0,594:5.0,3100:5.0,1584:5.0,1653:5.0]
+[hadoop@ip-172-31-0-231 ~]$ curl localhost:8081/58
+2020-03-02 15:04:34+0000 [-] "127.0.0.1" - - [02/Mar/2020:15:04:33 +0000] "GET /58 HTTP/1.1" 200 128 "-" "curl/7.61.1"
+The recommendations for user 58 are [2112:5.0,2374:5.0,3035:5.0,1584:5.0,2376:5.0,2243:5.0,2902:5.0,2110:5.0,1187:5.0,1320:5.0]
+[hadoop@ip-172-31-0-231 ~]$ curl localhost:8081/111
+2020-03-02 15:04:41+0000 [-] "127.0.0.1" - - [02/Mar/2020:15:04:40 +0000] "GET /111 HTTP/1.1" 200 127 "-" "curl/7.61.1"
+The recommendations for user 111 are [1912:5.0,527:5.0,1188:5.0,1584:5.0,2112:5.0,529:5.0,3100:5.0,1517:5.0,1187:5.0,2243:5.0]
+[hadoop@ip-172-31-0-231 ~]$ curl localhost:8081/11
+2020-03-02 15:04:49+0000 [-] "127.0.0.1" - - [02/Mar/2020:15:04:48 +0000] "GET /11 HTTP/1.1" 200 126 "-" "curl/7.61.1"
+The recommendations for user 11 are [2572:5.0,265:5.0,3760:5.0,3100:5.0,2111:5.0,2110:5.0,198:5.0,3298:5.0,1517:5.0,1914:5.0]
+[hadoop@ip-172-31-0-231 ~]$ vim hello.py
+[hadoop@ip-172-31-0-231 ~]$ 2020-03-02 20:20:46Initiating key re-exchange (timeout)
+-bash: syntax error near unexpected token `('
+[hadoop@ip-172-31-0-231 ~]$ 2020-03-02 20:20:46Initiating key re-exchange (timeout)
+-bash: syntax error near unexpected token `('
+[hadoop@ip-172-31-0-231 ~]$
